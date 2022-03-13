@@ -16,7 +16,7 @@ Though HTML is enough to create a simple website, it falls a bit short in the de
 
 Subsequent units will build on this foundation of HTML, CSS, and version control as we add JavaScript, servers, and databases to our stack to build interactive web applications.
 
-Key Topics
+## Key Topics
 The following topics will be covered in this unit:
 
 Command-line basics
