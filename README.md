@@ -50,9 +50,9 @@ Our website on project is built off of "flask_portfolio_hackers", the repository
 
 Team Member | Tristan | Valen | Ian | ??? |
 --- | --- | --- | --- | ---
-GitHub ID: | TristanCopley | Valen | IanHua | TristanCopley |
-Team Role: | Primary Designer | Lead Front-End | Technical Officer | ??? |
-GitHub Issues: | [Link](https://github.com/JakubPonulak/5_hackers/issues/assigned/hamzahakak) | [Link](https://github.com/JakubPonulak/5_hackers/issues/assigned/JakubPonulak) | [Link](https://github.com/JakubPonulak/5_hackers/issues/assigned/Kevinc023032) | [Link](https://github.com/JakubPonulak/5_hackers/issues/assigned/TristanCopley)
-Scrum Board: | [Link](https://github.com/JakubPonulak/5_hackers/projects/1?card_filter_query=assignee%3Ahamzahakak)| [Link](https://github.com/JakubPonulak/5_hackers/projects/1?card_filter_query=assignee%3AJakubPonulak) | [Link](https://github.com/JakubPonulak/5_hackers/projects/1?card_filter_query=assignee%3AKevinc023032) | [Link](https://github.com/JakubPonulak/5_hackers/projects/1?card_filter_query=assignee%3ATristanCopley)
-GitHub commits: | [Link](https://github.com/JakubPonulak/5_hackers/commits?author=hamzahakak) | [Link](https://github.com/JakubPonulak/5_hackers/commits?author=JakubPonulak) | [Link](https://github.com/JakubPonulak/5_hackers/commits?author=Kevinc023032) | [Link](https://github.com/JakubPonulak/5_hackers/commits?author=TristanCopley)
-GitHub profile: | [Link](https://github.com/TristanCopley) | [Link](https://github.com/ValenReynolds) | [Link](https://github.com/IanHua14) | [Link](https://github.com/TristanCopley)
+GitHub ID: | TristanCopley | Valen | IanHua | ??? |
+Team Role: | Primary Designer | Developer | Developer | ??? |
+GitHub Issues: | [Link]() | [Link]() | [Link]() | [Link]()
+Scrum Board: | [Link]()| [Link]() | [Link]() | [Link]()
+GitHub commits: | [Link]() | [Link]() | [Link]() | [Link]()
+GitHub profile: | [Link](https://github.com/TristanCopley) | [Link](https://github.com/ValenReynolds) | [Link](https://github.com/IanHua14) | [Link]()
