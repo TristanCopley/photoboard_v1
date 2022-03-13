@@ -52,7 +52,7 @@ Team Member | Tristan | Valen | Ian | ??? |
 --- | --- | --- | --- | ---
 GitHub ID: | TristanCopley | Valen | IanHua | ??? |
 Team Role: | Primary Designer | Developer | Developer | ??? |
-GitHub Issues: | [Link]() | [Link]() | [Link]() | [Link]()
-Scrum Board: | [Link]()| [Link]() | [Link]() | [Link]()
-GitHub commits: | [Link]() | [Link]() | [Link]() | [Link]()
-GitHub profile: | [Link](https://github.com/TristanCopley) | [Link](https://github.com/ValenReynolds) | [Link](https://github.com/IanHua14) | [Link]()
+GitHub Issues: | [Created Issues]  | [Created Issues] | [Created Issues] | [Created Issues]
+Scrum Board: | [Assigned Issues] | [Assigned Issues] | [Assigned Issues] | [Assigned Issues]
+GitHub commits: | [Repo Commits] | [Repo Commits] | [Repo Commits] | [Repo Commits]
+GitHub profile: | [Git Profile](https://github.com/TristanCopley) | [Git Profile](https://github.com/ValenReynolds) | [Git Profile](https://github.com/IanHua14) | [Git Profile]
