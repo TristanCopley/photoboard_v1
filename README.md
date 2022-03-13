@@ -28,6 +28,7 @@ The following bullets are goals we are trying to achieve:
 ## Project History:
 This project begun at the start of Del Norte's third trimester. Written in pure HTML, CSS, and JavaScript, our project started from nothing but a blank slate. We are aiming for extreme quality and speed. We are using a web bundler called Webpack to make our code even more effecient. 
 
+## Contributors:
 Team Member | Tristan | Valen | Ian | ??? |
 --- | --- | --- | --- | ---
 GitHub ID: | TristanCopley | ValenReynolds | IanHua14 | ??? |
