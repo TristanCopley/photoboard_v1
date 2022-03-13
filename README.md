@@ -50,7 +50,7 @@ Our website on project is built off of "flask_portfolio_hackers", the repository
 
 Team Member | Tristan | Valen | Ian | ??? |
 --- | --- | --- | --- | ---
-GitHub ID: | TristanCopley | Valen | IanHua | ??? |
+GitHub ID: | TristanCopley | ValenReynolds | IanHua14 | ??? |
 Team Role: | Primary Designer | Developer | Developer | ??? |
 GitHub Issues: | [Created Issues]  | [Created Issues] | [Created Issues] | [Created Issues]
 Scrum Board: | [Assigned Issues] | [Assigned Issues] | [Assigned Issues] | [Assigned Issues]
