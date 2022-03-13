@@ -49,7 +49,7 @@ Our website on project is built off of "flask_portfolio_hackers", the repository
 ## Contributors:
 
 Team Member | Hamza | Jakub | Kevin | Tristan |
---- | --- | --- | --- | --- | ---
+--- | --- | --- | --- | ---
 GitHub ID: | hamzahakak | JakubPonulak | Kevinc023032 | TristanCopley |
 Team Role: | Primary Designer | GitHub Admin | Technical Officer | Scrum Master |
 GitHub Issues: | [Link](https://github.com/JakubPonulak/5_hackers/issues/assigned/hamzahakak) | [Link](https://github.com/JakubPonulak/5_hackers/issues/assigned/JakubPonulak) | [Link](https://github.com/JakubPonulak/5_hackers/issues/assigned/Kevinc023032) | [Link](https://github.com/JakubPonulak/5_hackers/issues/assigned/TristanCopley)
