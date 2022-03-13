@@ -45,8 +45,7 @@ Create a repository
 Deploy to personal pages
 
 ## Project History:
-Our website on project is built off of "flask_portfolio_hackers", the repository that Jakub and Tristan used in Trimester 1. However, besides basic layouts, are website and project is different, as it offers a completely new and unrelated theme. Our work on this project started at the beginning of Trimester 2.
-## Contributors:
+This project begun at the start of Del Norte's third trimester. Written in pure HTML, CSS, and JavaScript, our project started from nothing but a blank slate. We are aiming for extreme quality and speed. We are using a web bundler called Webpack to make our code even more effecient. 
 
 Team Member | Tristan | Valen | Ian | ??? |
 --- | --- | --- | --- | ---
