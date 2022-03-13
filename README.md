@@ -37,4 +37,4 @@ Scrum Board: | [Assigned Issues] | [Assigned Issues] | [Assigned Issues] | [Assi
 GitHub commits: | [Repo Commits] | [Repo Commits] | [Repo Commits] | [Repo Commits]
 GitHub profile: | [Git Profile](https://github.com/TristanCopley) | [Git Profile](https://github.com/ValenReynolds) | [Git Profile](https://github.com/IanHua14) | [Git Profile]
 
-Sponsored by ???
+<Sponsored by ???>
