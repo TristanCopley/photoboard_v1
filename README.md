@@ -25,6 +25,9 @@ The following bullets are goals we are trying to achieve:
 * Fun!
   * We want those who use Photoboard to leave smiling!
 
+## Project History:
+This project begun at the start of Del Norte's third trimester. Written in pure HTML, CSS, and JavaScript, our project started from nothing but a blank slate. We are aiming for extreme quality and speed. We are using a web bundler called Webpack to make our code even more effecient. 
+
 ## [Development Schedule and Timebox](https://github.com/TristanCopley/photoboard/wiki)
 
 ### Photoboard Development Schedule and Timebox
@@ -43,10 +46,6 @@ The following bullets are goals we are trying to achieve:
 | 9 | N/A | N/A| N/A | :x: Incomplete |
 | 10 | N/A | N/A | N/A | :x: Incomplete |
 | 11 | N/A | N/A| N/A | :x: Incomplete |
-
-
-## Project History:
-This project begun at the start of Del Norte's third trimester. Written in pure HTML, CSS, and JavaScript, our project started from nothing but a blank slate. We are aiming for extreme quality and speed. We are using a web bundler called Webpack to make our code even more effecient. 
 
 ## Contributors:
 Team Member | Tristan | Valen | Ian | ??? |
