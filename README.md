@@ -27,6 +27,23 @@ The following bullets are goals we are trying to achieve:
 
 ## [Development Schedule and Timebox](https://github.com/TristanCopley/photoboard/wiki)
 
+### Photoboard Development Schedule and Timebox
+
+| Week  | Issues | Objective | Details | Status :x: :heavy_minus_sign: :heavy_check_mark: |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| 0 | None | Creating Repo / Project Planning| [Details](https://github.com/TristanCopley/photoboard/wiki/Week-0---Details) | :heavy_minus_sign: Pending |
+| 1 | [#1](/TristanCopley/photoboard/issues/1) | Create Homepage / Plan CSS Theme / Further Planning | [Details](https://github.com/TristanCopley/photoboard/wiki/Week-1-Details) | :x: Incomplete |
+| 2 | N/A | N/A | N/A | :x: Incomplete |
+| 3 | N/A | N/A| N/A | :x: Incomplete |
+| 4 | N/A | N/A | N/A | :x: Incomplete |
+| 5 | N/A | N/A| N/A | :x: Incomplete |
+| 6 | N/A | N/A | N/A | :x: Incomplete |
+| 7 | N/A | N/A| N/A | :x: Incomplete |
+| 8 | N/A | N/A | N/A | :x: Incomplete |
+| 9 | N/A | N/A| N/A | :x: Incomplete |
+| 10 | N/A | N/A | N/A | :x: Incomplete |
+| 11 | N/A | N/A| N/A | :x: Incomplete |
+
 ## Project History:
 This project begun at the start of Del Norte's third trimester. Written in pure HTML, CSS, and JavaScript, our project started from nothing but a blank slate. We are aiming for extreme quality and speed. We are using a web bundler called Webpack to make our code even more effecient. 
 
