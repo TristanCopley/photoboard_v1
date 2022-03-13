@@ -10,8 +10,8 @@ This project was created to help photography classes share and discuss their wor
 Since our project is not a company production, we have decided not to use Flask or other libraries that usually speed up web prodcution.
 
 
-## Key Topics
-The following topics will be covered in this unit:
+## Project Key Goals
+The following bullets are goals we are trying to achieve:
 
 * Command-line basics
 * Navigating the file tree
