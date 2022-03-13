@@ -16,14 +16,14 @@ Our website will allow for anyone with an account to create a Photoboard and all
 The following bullets are goals we are trying to achieve:
 
 * Ease and accessibility
- * Anyone with a browser can join a Photoboard
- * Anyone with an account can make a Photoboard
+  * Anyone with a browser can join a Photoboard
+  * Anyone with an account can make a Photoboard
 * Speed
- * Everything is coded with minimal libraries allowing for complete optimzation and speed control
+  * Everything is coded with minimal libraries allowing for complete optimzation and speed control
 * Usabilty
- * We want anyone who takes interest in photography or just digital images to use Photoboard
+  * We want anyone who takes interest in photography or just digital images to use Photoboard
 * Fun!
- * We want those who use Photoboard to leave smiling!
+  * We want those who use Photoboard to leave smiling!
 
 ## Project History:
 This project begun at the start of Del Norte's third trimester. Written in pure HTML, CSS, and JavaScript, our project started from nothing but a blank slate. We are aiming for extreme quality and speed. We are using a web bundler called Webpack to make our code even more effecient. 
