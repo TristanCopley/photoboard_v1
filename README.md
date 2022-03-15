@@ -2,15 +2,14 @@
 
 ## Table of Contents
 * Our Purpose
-
-* Our Purpose
-
-* Our Purpose
-
-* Our Purpose
-
-* Our Purpose
-
+* Overview
+ * Our Purpose
+ * Project Key Goals
+ * Project Requirements
+ * Project History
+* Development
+ * Development Schedule and Timebox
+ * Contributors
 
 ## Our Purpose:
 This project was created to help photography classes share and discuss their work in a fast and easy manner. Inspired by Padlet, Photoboard combines the ease and accessibility from Padlet with the effective design and photo oriented program from our lead developers. Photoboard is not just for our Del Norte photography course, but for any photo class.
