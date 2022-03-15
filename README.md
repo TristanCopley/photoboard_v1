@@ -71,7 +71,7 @@ This project begun at the start of Del Norte's third trimester. Written in pure 
 ## Contributors:
 Team Member | Tristan | Valen | Ian | Abigail |
 --- | --- | --- | --- | ---
-GitHub ID: | TristanCopley | ValenReynolds | IanHua14 | ??? |
+GitHub ID: | TristanCopley | ValenReynolds | IanHua14 | Abigail-Peltz |
 Team Role: | Primary Designer | Developer | Developer | ??? |
 GitHub Issues: | [Created Issues](https://github.com/TristanCopley/photoboard/issues?q=author%3ATristanCopley+) | [Created Issues](https://github.com/TristanCopley/photoboard/issues/created_by/ValenReynolds) | [Created Issues] | [Created Issues]
 Scrum Board: | [Assigned Issues](https://github.com/TristanCopley/photoboard/issues/assigned/TristanCopley) | [Assigned Issues](https://github.com/TristanCopley/photoboard/projects/2?card_filter_query=assignee%3Avalenreynolds)| [Assigned Issues] | [Assigned Issues]
