@@ -2,13 +2,11 @@
 
 ## Table of Contents
 * Our Purpose
-
 * Overview
   * Our Purpose
   * Project Key Goals
   * Project Requirements
   * Project History
- 
 * Development
   * Development Schedule and Timebox
   * Contributors
