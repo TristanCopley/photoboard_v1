@@ -76,6 +76,6 @@ Team Role: | Primary Designer | Developer | Developer | ??? |
 GitHub Issues: | [Created Issues](https://github.com/TristanCopley/photoboard/issues?q=author%3ATristanCopley+) | [Created Issues](https://github.com/TristanCopley/photoboard/issues/created_by/ValenReynolds) | [Created Issues] | [Created Issues]
 Scrum Board: | [Assigned Issues](https://github.com/TristanCopley/photoboard/issues/assigned/TristanCopley) | [Assigned Issues](https://github.com/TristanCopley/photoboard/projects/2?card_filter_query=assignee%3Avalenreynolds)| [Assigned Issues] | [Assigned Issues]
 GitHub commits: | [Repo Commits](https://github.com/TristanCopley/photoboard/commits?author=TristanCopley) | [Repo Commits](https://github.com/TristanCopley/photoboard/commits/main) | [Repo Commits] | [Repo Commits]
-GitHub profile: | [Git Profile](https://github.com/TristanCopley) | [Git Profile](https://github.com/ValenReynolds) | [Git Profile](https://github.com/IanHua14) | [Git Profile]
+GitHub profile: | [Git Profile](https://github.com/TristanCopley) | [Git Profile](https://github.com/ValenReynolds) | [Git Profile](https://github.com/IanHua14) | [Git Profile] https://github.com/Abigail-Peltz]
 
 `Sponsored by Mr. Devlin`
