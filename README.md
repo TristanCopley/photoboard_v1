@@ -7,9 +7,9 @@ This project was created to help photography classes share and discuss their wor
 
 
 ## Overview
-Since our project is not a company production, we have decided not to use Flask or other libraries that usually speed up web production. We are developing a intricate and extensive plan that details exactly what and how we are going to reach the completion of this webapp.
+ Since our project is not a company production, we have decided not to use Flask or other libraries that usually speed up web production. We are developing a intricate and extensive plan that details exactly what and how we are going to reach the completion of this webapp.
 
-Our website will allow for anyone with an account to create a Photoboard and allow their students to share instantly. Upon creating a Photoboard, you will be able to change a few settings: Max photo size, number of photos per person, whether those who join can add photos or are in view only. Anyone, regardless of if they have an account, can join an active Photoboard if they join with the correct code (Like Kahoot). Ontop of this, those whoa re in an active Photoboard can write comments on other people's photos to discuss their creative experiences.
+ Our website will allow for anyone with an account to create a Photoboard and allow their students to share instantly. Upon creating a Photoboard, you will be able to change a few settings: Max photo size, number of photos per person, whether those who join can add photos or are in view only. Anyone, regardless of if they have an account, can join an active Photoboard if they join with the correct code (Like Kahoot). Ontop of this, those whoa re in an active Photoboard can write comments on other people's photos to discuss their creative experiences.
 
 
 ## Project Key Goals
