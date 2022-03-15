@@ -66,7 +66,7 @@ This project begun at the start of Del Norte's third trimester. Written in pure 
 | 11 | N/A | N/A| N/A | :x: Incomplete |
 
 ## Contributors:
-Team Member | Tristan | Valen | Ian | ??? |
+Team Member | Tristan | Valen | Ian | Abigail |
 --- | --- | --- | --- | ---
 GitHub ID: | TristanCopley | ValenReynolds | IanHua14 | ??? |
 Team Role: | Primary Designer | Developer | Developer | ??? |
