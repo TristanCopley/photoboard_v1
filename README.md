@@ -9,6 +9,7 @@
   * [Project Requirements](https://github.com/TristanCopley/photoboard/blob/main/README.md#project-requirements)
   * [Project History](https://github.com/TristanCopley/photoboard/blob/main/README.md#project-history)
  
+ 
 * [Development](https://github.com/TristanCopley/photoboard/blob/main/README.md#development-schedule-and-timebox)
   * [Timebox](https://github.com/TristanCopley/photoboard/blob/main/README.md#development-schedule-and-timebox)
   * [Contributors](https://github.com/TristanCopley/photoboard/blob/main/README.md#contributors)
