@@ -25,12 +25,12 @@ The following bullets are goals we are trying to achieve:
 * Fun!
   * We want those who use Photoboard to leave smiling!
  
- ## Project Rquirements 
+ ## Project Requirements 
 The following bullets are requirements from our sponser Mr Devlin:
 
 * A login for his students
-*A gallery for photos the students took
-*Allow access for the students to view all the photos.
+* A gallery for photos the students took
+* Allow access for the students to view all the photos.
 
 ## Project History:
 This project begun at the start of Del Norte's third trimester. Written in pure HTML, CSS, and JavaScript, our project started from nothing but a blank slate. We are aiming for extreme quality and speed. We are using a web bundler called Webpack to make our code even more effecient. 
