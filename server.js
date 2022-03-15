@@ -5,7 +5,7 @@ const http = require('http');
 const server = http.createServer(app);
 const { Server } = require("socket.io");
 const hostname = '192.168.0.14';
-//const io = new Server(server);
+const io = new Server(server);
 
 // Public is for development
 // build is for serving client code after it has been gulped or minified
