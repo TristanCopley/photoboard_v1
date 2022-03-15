@@ -26,7 +26,7 @@ The following bullets are goals we are trying to achieve:
   * We want those who use Photoboard to leave smiling!
  
  ## Project Requirements 
-The following bullets are requirements from our sponser Mr Devlin:
+The following bullets are requirements from our sponser Mr. Devlin:
 
 * A login for his students
 * A gallery for photos the students took
@@ -64,4 +64,4 @@ Scrum Board: | [Assigned Issues] | [Assigned Issues] | [Assigned Issues] | [Assi
 GitHub commits: | [Repo Commits] | [Repo Commits] | [Repo Commits] | [Repo Commits]
 GitHub profile: | [Git Profile](https://github.com/TristanCopley) | [Git Profile](https://github.com/ValenReynolds) | [Git Profile](https://github.com/IanHua14) | [Git Profile]
 
-`Sponsored by ???`
+`Sponsored by Mr. Devlin`
