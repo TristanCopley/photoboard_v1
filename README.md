@@ -11,6 +11,7 @@
  
  
 * [Development](https://github.com/TristanCopley/photoboard/blob/main/README.md#development-schedule-and-timebox)
+  * [Wireframe]()
   * [Timebox](https://github.com/TristanCopley/photoboard/blob/main/README.md#development-schedule-and-timebox)
   * [Contributors](https://github.com/TristanCopley/photoboard/blob/main/README.md#contributors)
 
