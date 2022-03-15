@@ -4,14 +4,14 @@
 
 
 * [Overview](https://github.com/TristanCopley/photoboard/blob/main/README.md#overview)
-  * [Our Purpose]()
-  * [Project Key Goals]()
-  * [Project Requirements]()
-  * [Project History]()
+  * [Our Purpose](https://github.com/TristanCopley/photoboard/blob/main/README.md#our-purpose)
+  * [Project Key Goals](https://github.com/TristanCopley/photoboard/blob/main/README.md#project-key-goals)
+  * [Project Requirements](https://github.com/TristanCopley/photoboard/blob/main/README.md#project-requirements)
+  * [Project History](https://github.com/TristanCopley/photoboard/blob/main/README.md#project-history)
  
-* [Development]()
-  * [Development Schedule and Timebox]()
-  * [Contributors]()
+* [Development](https://github.com/TristanCopley/photoboard/blob/main/README.md#development)
+  * [Development Schedule and Timebox](https://github.com/TristanCopley/photoboard/blob/main/README.md#development-schedule-and-timebox)
+  * [Contributors](https://github.com/TristanCopley/photoboard/blob/main/README.md#contributors)
 
 
 ## Overview
