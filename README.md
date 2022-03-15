@@ -1,9 +1,18 @@
 # Photoboard: The best way to share your experiences!
 
+## Table of Contents
 
 
-## Our Purpose:
-This project was created to help photography classes share and discuss their work in a fast and easy manner. Inspired by Padlet, Photoboard combines the ease and accessibility from Padlet with the effective design and photo oriented program from our lead developers. Photoboard is not just for our Del Norte photography course, but for any photo class.
+* [Overview](https://github.com/TristanCopley/photoboard/blob/main/README.md#overview)
+  * [Our Purpose](https://github.com/TristanCopley/photoboard/blob/main/README.md#our-purpose)
+  * [Project Key Goals](https://github.com/TristanCopley/photoboard/blob/main/README.md#project-key-goals)
+  * [Project Requirements](https://github.com/TristanCopley/photoboard/blob/main/README.md#project-requirements)
+  * [Project History](https://github.com/TristanCopley/photoboard/blob/main/README.md#project-history)
+ 
+ 
+* [Development](https://github.com/TristanCopley/photoboard/blob/main/README.md#development-schedule-and-timebox)
+  * [Timebox](https://github.com/TristanCopley/photoboard/blob/main/README.md#development-schedule-and-timebox)
+  * [Contributors](https://github.com/TristanCopley/photoboard/blob/main/README.md#contributors)
 
 
 ## Overview
@@ -11,6 +20,8 @@ Since our project is not a company production, we have decided not to use Flask 
 
 Our website will allow for anyone with an account to create a Photoboard and allow their students to share instantly. Upon creating a Photoboard, you will be able to change a few settings: Max photo size, number of photos per person, whether those who join can add photos or are in view only. Anyone, regardless of if they have an account, can join an active Photoboard if they join with the correct code (Like Kahoot). Ontop of this, those whoa re in an active Photoboard can write comments on other people's photos to discuss their creative experiences.
 
+## Our Purpose:
+This project was created to help photography classes share and discuss their work in a fast and easy manner. Inspired by Padlet, Photoboard combines the ease and accessibility from Padlet with the effective design and photo oriented program from our lead developers. Photoboard is not just for our Del Norte photography course, but for any photo class.
 
 ## Project Key Goals
 The following bullets are goals we are trying to achieve:
@@ -24,6 +35,13 @@ The following bullets are goals we are trying to achieve:
   * We want anyone who takes interest in photography or just digital images to use Photoboard
 * Fun!
   * We want those who use Photoboard to leave smiling!
+ 
+ ## Project Requirements 
+The following bullets are requirements from our sponser Mr. Devlin:
+
+* A login for his students
+* A gallery for photos the students took
+* Allow access for the students to view all the photos.
 
 ## Project History:
 This project begun at the start of Del Norte's third trimester. Written in pure HTML, CSS, and JavaScript, our project started from nothing but a blank slate. We are aiming for extreme quality and speed. We are using a web bundler called Webpack to make our code even more effecient. 
@@ -57,4 +75,4 @@ Scrum Board: | [Assigned Issues] | [Assigned Issues] | [Assigned Issues] | [Assi
 GitHub commits: | [Repo Commits] | [Repo Commits] | [Repo Commits] | [Repo Commits]
 GitHub profile: | [Git Profile](https://github.com/TristanCopley) | [Git Profile](https://github.com/ValenReynolds) | [Git Profile](https://github.com/IanHua14) | [Git Profile]
 
-`Sponsored by ???`
+`Sponsored by Mr. Devlin`
