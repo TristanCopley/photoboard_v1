@@ -10,7 +10,7 @@
 |  * Project Requirements  |
 |  * Project History  |
 
-|* Development
+| * Development |
 |  * Development Schedule and Timebox |
 |  * Contributors |
 
