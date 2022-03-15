@@ -4,7 +4,7 @@
 
 | Table of Contents |
 | --- |
-| Overview.‎‎‎‎‎‎.... 1 |
+| Overview. &nbsp .... 1 |
 | . . . Our Purpose . . 1.1 |
 | . . . Project Key Goals . . |
 | . . . Project Requirements.... |
