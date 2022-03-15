@@ -1,7 +1,7 @@
 # Photoboard: The best way to share your experiences!
 
 ## Table of Contents
-
+|  |
 * Overview
   * Our Purpose
   * Project Key Goals
@@ -11,6 +11,7 @@
 * Development
   * Development Schedule and Timebox
   * Contributors
+|  |
 
 ## Overview
 Since our project is not a company production, we have decided not to use Flask or other libraries that usually speed up web production. We are developing a intricate and extensive plan that details exactly what and how we are going to reach the completion of this webapp.
