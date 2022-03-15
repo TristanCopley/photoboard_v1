@@ -49,7 +49,7 @@ This project begun at the start of Del Norte's third trimester. Written in pure 
 
 ## [Development Schedule and Timebox](https://github.com/TristanCopley/photoboard/wiki)
 
-### [Wireframe](https://coggle.it/diagram/Yi1LiZSuTY1a3Fw7/t/photoboard/9253e056eff1f3a76b6f5030146e917f60f1714826afb14d5eb9ea826c1cc369)
+### [Website Wireframe](https://coggle.it/diagram/Yi1LiZSuTY1a3Fw7/t/photoboard/9253e056eff1f3a76b6f5030146e917f60f1714826afb14d5eb9ea826c1cc369)
 
 ### Photoboard Development Schedule and Timebox
 
