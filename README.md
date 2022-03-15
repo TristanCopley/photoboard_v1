@@ -3,7 +3,7 @@
 ## Table of Contents
 
 
-* [Overview]()
+* [Overview](https://github.com/TristanCopley/photoboard/blob/main/README.md#overview)
   * [Our Purpose]()
   * [Project Key Goals]()
   * [Project Requirements]()
