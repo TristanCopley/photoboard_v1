@@ -2,7 +2,8 @@
 
 ## Table of Contents
 
-| |
+| Table of Contents |
+| --- |
 | * Overview |
 |  * Our Purpose |
 |  * Project Key Goals |
