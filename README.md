@@ -4,11 +4,11 @@
 
 | Table of Contents |
 | --- |
-| * Overview |
-|  * Our Purpose |
-|  * Project Key Goals |
-|  * Project Requirements  |
-|  * Project History  |
+| Overview............ 1 |
+| . . . Our Purpose . . 1.1 |
+| . . . Project Key Goals . . |
+| . . . Project Requirements.... |
+| . . . Project History  |
 | * Development |
 |  * Development Schedule and Timebox |
 |  * Contributors |
