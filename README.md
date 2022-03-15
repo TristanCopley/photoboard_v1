@@ -79,5 +79,3 @@ GitHub commits: | [Repo Commits] | [Repo Commits](https://github.com/TristanCopl
 GitHub profile: | [Git Profile](https://github.com/TristanCopley) | [Git Profile](https://github.com/ValenReynolds) | [Git Profile](https://github.com/IanHua14) | [Git Profile]
 
 `Sponsored by Mr. Devlin`
-
-`Sponsored by Mr. Devlin`
