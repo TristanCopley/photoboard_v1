@@ -2,16 +2,17 @@
 
 ## Table of Contents
 
-| Table of Contents |
-| --- |
-| Overview. &nbsp i​n​v​i​s​i​b​l​e. 1 |
-| . . . Our Purpose . . 1.1 |
-| . . . Project Key Goals . . |
-| . . . Project Requirements.... |
-| . . . Project History  |
-| * Development |
-|  * Development Schedule and Timebox |
-|  * Contributors |
+
+* [Overview]()
+  * [Our Purpose]()
+  * [Project Key Goals]()
+  * [Project Requirements]()
+  * [Project History]()
+ 
+* [Development]()
+  * [Development Schedule and Timebox]()
+  * [Contributors]()
+
 
 ## Overview
 Since our project is not a company production, we have decided not to use Flask or other libraries that usually speed up web production. We are developing a intricate and extensive plan that details exactly what and how we are going to reach the completion of this webapp.
