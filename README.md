@@ -72,7 +72,7 @@ GitHub ID: | TristanCopley | ValenReynolds | IanHua14 | ??? |
 Team Role: | Primary Designer | Developer | Developer | ??? |
 GitHub Issues: | [Created Issues](https://github.com/TristanCopley/photoboard/issues?q=author%3ATristanCopley+) | [Created Issues] | [Created Issues] | [Created Issues]
 Scrum Board: | [Assigned Issues](https://github.com/TristanCopley/photoboard/issues?q=author%3ATristanCopley+assignee%3ATristanCopley) | [Assigned Issues] | [Assigned Issues] | [Assigned Issues]
-GitHub commits: | [Repo Commits] | [Repo Commits] | [Repo Commits] | [Repo Commits]
+GitHub commits: | [Repo Commits](https://github.com/TristanCopley/photoboard/commits?author=TristanCopley) | [Repo Commits] | [Repo Commits] | [Repo Commits]
 GitHub profile: | [Git Profile](https://github.com/TristanCopley) | [Git Profile](https://github.com/ValenReynolds) | [Git Profile](https://github.com/IanHua14) | [Git Profile]
 
 `Sponsored by Mr. Devlin`
