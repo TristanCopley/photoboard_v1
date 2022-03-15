@@ -50,7 +50,7 @@ This project begun at the start of Del Norte's third trimester. Written in pure 
 ## [Development Schedule and Timebox](https://github.com/TristanCopley/photoboard/wiki)
 
 ### [Website Wireframe](https://coggle.it/diagram/Yi1LiZSuTY1a3Fw7/t/photoboard/9253e056eff1f3a76b6f5030146e917f60f1714826afb14d5eb9ea826c1cc369)
-<img width="874" alt="Screen Shot 2022-03-15 at 2 57 39 PM" src="https://user-images.githubusercontent.com/89219797/158479471-f58f8bcf-bc46-4d33-a072-8b4061fd01e1.png">
+<img width="874" alt="Image of website wireframe failed to load" src="https://user-images.githubusercontent.com/89219797/158479471-f58f8bcf-bc46-4d33-a072-8b4061fd01e1.png">
 
 ### Photoboard Development Schedule and Timebox
 
