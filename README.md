@@ -61,7 +61,7 @@ This project begun at the start of Del Norte's third trimester. Written in pure 
 | ------------- | ------------- | ------------- | ------------- | ------------- |
 | 0 | None | Creating Repo / Project Planning| [Details](https://github.com/TristanCopley/photoboard/wiki/Week-0---Details) | :heavy_check_mark: Complete |
 | 1 | [#1](/TristanCopley/photoboard/issues/1) | Create Homepage / Plan CSS Theme / Further Planning | [Details](https://github.com/TristanCopley/photoboard/wiki/Week-1-Details) | :heavy_minus_sign: Pending |
-| 2 | None | Student + Teacher Interface / Announcement feature | [Link](https://github.com/TristanCopley/photoboard/wiki/Week-2-Details) | :x: Incomplete |
+| 2 | None | Student + Teacher Interface / Announcement feature | [Details](https://github.com/TristanCopley/photoboard/wiki/Week-2-Details) | :x: Incomplete |
 | 3 | None | N/A | N/A | :x: Incomplete |
 | 4 | None | N/A | N/A | :x: Incomplete |
 | 5 | None | N/A | N/A | :x: Incomplete |
