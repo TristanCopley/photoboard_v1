@@ -1,39 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" type="image/png" href="assets/logo.png">
-    <!--<link rel="icon" sizes="192x192" href="/path/to/icon.png">-->
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" type="image/png" href="assets/logo.png">
+        <!--<link rel="icon" sizes="192x192" href="/path/to/icon.png">-->
 
-    <title>Photoboard: Share experiences</title>
+        <title>Photoboard: Share experiences</title>
 
-    <link rel="stylesheet" href="styles/main.css">
+        <link rel="stylesheet" href="styles/public.css">
 
-    <style>
+    </head>
+    <body>
 
-        .navbar {
+        <!-- Navbar -->
+        <div class='login-wrapper'>
 
+            <div class="login-container">
 
+                <form>
 
-        }
+                    <h1>Sign in to Photoboard</h1>
 
-    </style>
+                    <div class="form-row">
+                        <input type="text" id="usernameInput" class="form-input" placeholder="Tristan123">
+                        <label for="usernameInput" class="form-label">Username</label>
+                    </div>
 
-</head>
-<body>
+                    <div class="form-row">
+                        <input type="password" id="passwordInput" class="form-input" placeholder="Password456">
+                        <label for="passwordInput" class="form-label">Password</label>
+                    </div>
 
-<!-- Navbar -->
-<div class='navbar'>
+                    <a href="#" class="forgot-password">Forgot Password?</a>
+                    <button type="submit" class="submit-btn">Login</button>
 
-    <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="news.asp">News</a></li>
-        <li><a href="contact.asp">Contact</a></li>
-        <li><a href="about.asp">About</a></li>
-    </ul>
+                </form>
 
-</div>
+                <p class="sign-up-text">Don't have an account? <a href="#"> Sign Up</a></p>
 
-</body>
+            </div>
+
+        </div>
+
+    </body>
 </html>
