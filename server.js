@@ -4,7 +4,7 @@ const app = express();
 const http = require('http');
 const server = http.createServer(app);
 const { Server } = require("socket.io");
-const hostname = '192.168.0.14';
+const hostname =  'localhost';
 const io = new Server(server);
 
 // Public is for development
