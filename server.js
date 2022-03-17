@@ -10,7 +10,7 @@ const io = new Server(server);
 // Public is for development
 // build is for serving client code after it has been gulped or minified
 
-app.use(express.static('dev')); // Using Dev for serving files
+app.use(express.static('dev/default')); // Using Dev for serving files
 app.get('/', (req, res) => {
 
     res.sendFile('index.html'); // Serves index.html
