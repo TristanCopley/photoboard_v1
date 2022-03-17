@@ -11,6 +11,7 @@
  
  
 * [Development](https://github.com/TristanCopley/photoboard/blob/main/README.md#development-schedule-and-timebox)
+  * [Wireframe](https://github.com/TristanCopley/photoboard/blob/main/README.md#website-wireframe-version-11)
   * [Timebox](https://github.com/TristanCopley/photoboard/blob/main/README.md#development-schedule-and-timebox)
   * [Contributors](https://github.com/TristanCopley/photoboard/blob/main/README.md#contributors)
 
@@ -48,31 +49,38 @@ This project begun at the start of Del Norte's third trimester. Written in pure 
 
 ## [Development Schedule and Timebox](https://github.com/TristanCopley/photoboard/wiki)
 
+### [Website Wireframe Version 1.1](https://coggle.it/diagram/YjEkm-wvuAnxzc0g/t/-/33657e09ec3d1f306610c65f1fc4334932c7f5d4a7f296bc4e936ffd565bdf03)
+<details><img width="874" alt="Image of website wireframe version 1.1 failed to load" src="https://user-images.githubusercontent.com/89219797/158516585-568a20dc-9cd2-468a-ac90-1dd6316e8a89.png"></details>
+
+### [Website Wireframe Version 1.0](https://coggle.it/diagram/Yi1LiZSuTY1a3Fw7/t/photoboard/9253e056eff1f3a76b6f5030146e917f60f1714826afb14d5eb9ea826c1cc369)
+<details><img width="874" alt="Image of website wireframe version 1.0 failed to load" src="https://user-images.githubusercontent.com/89219797/158479471-f58f8bcf-bc46-4d33-a072-8b4061fd01e1.png"></details>
+
 ### Photoboard Development Schedule and Timebox
 
 | Week  | Issues | Objective | Details | Status :x: :heavy_minus_sign: :heavy_check_mark: |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| 0 | None | Creating Repo / Project Planning| [Details](https://github.com/TristanCopley/photoboard/wiki/Week-0---Details) | :heavy_minus_sign: Pending |
-| 1 | [#1](/TristanCopley/photoboard/issues/1) | Create Homepage / Plan CSS Theme / Further Planning | [Details](https://github.com/TristanCopley/photoboard/wiki/Week-1-Details) | :x: Incomplete |
-| 2 | N/A | N/A | N/A | :x: Incomplete |
-| 3 | N/A | N/A| N/A | :x: Incomplete |
-| 4 | N/A | N/A | N/A | :x: Incomplete |
-| 5 | N/A | N/A| N/A | :x: Incomplete |
-| 6 | N/A | N/A | N/A | :x: Incomplete |
-| 7 | N/A | N/A| N/A | :x: Incomplete |
-| 8 | N/A | N/A | N/A | :x: Incomplete |
-| 9 | N/A | N/A| N/A | :x: Incomplete |
-| 10 | N/A | N/A | N/A | :x: Incomplete |
-| 11 | N/A | N/A| N/A | :x: Incomplete |
+| 0 | None | Creating Repo / Project Planning| [Details](https://github.com/TristanCopley/photoboard/wiki/Week-0---Details) | :heavy_check_mark: Complete |
+| 1 | [#1](/TristanCopley/photoboard/issues/1) | Create Homepage / Plan CSS Theme / Further Planning | [Details](https://github.com/TristanCopley/photoboard/wiki/Week-1-Details) | :heavy_minus_sign: Pending |
+| 2 | None | Student + Teacher Interface / Announcement feature | [Details](https://github.com/TristanCopley/photoboard/wiki/Week-2-Details) | :x: Incomplete |
+| 3 | None | N/A | N/A | :x: Incomplete |
+| 4 | None | N/A | N/A | :x: Incomplete |
+| 5 | None | N/A | N/A | :x: Incomplete |
+| 6 | None | N/A | N/A | :x: Incomplete |
+| 7 | None | N/A | N/A | :x: Incomplete |
+| 8 | None | N/A | N/A | :x: Incomplete |
+| 9 | None | N/A | N/A | :x: Incomplete |
+| 10 | None | N/A | N/A | :x: Incomplete |
+| 11 | None | N/A | N/A | :x: Incomplete |
+
 
 ## Contributors:
-Team Member | Tristan | Valen | Ian | ??? |
+Team Member | Tristan | Valen | Ian | Abigail |
 --- | --- | --- | --- | ---
-GitHub ID: | TristanCopley | ValenReynolds | IanHua14 | ??? |
-Team Role: | Primary Designer | Developer | Developer | ??? |
-GitHub Issues: | [Created Issues](https://github.com/TristanCopley/photoboard/issues?q=author%3ATristanCopley+) | [Created Issues] | [Created Issues] | [Created Issues]
-Scrum Board: | [Assigned Issues] | [Assigned Issues] | [Assigned Issues] | [Assigned Issues]
-GitHub commits: | [Repo Commits] | [Repo Commits] | [Repo Commits] | [Repo Commits]
-GitHub profile: | [Git Profile](https://github.com/TristanCopley) | [Git Profile](https://github.com/ValenReynolds) | [Git Profile](https://github.com/IanHua14) | [Git Profile]
+GitHub ID: | TristanCopley | ValenReynolds | IanHua14 | Abigail-Peltz |
+Team Role: | Primary Designer | Developer | Developer | Developer |
+GitHub Issues: | [Created Issues](https://github.com/TristanCopley/photoboard/issues?q=author%3ATristanCopley+) | [Created Issues](https://github.com/TristanCopley/photoboard/issues/created_by/ValenReynolds) | [Created Issues](https://github.com/TristanCopley/photoboard/issues?q=assignee%3AIanHua14+is%3Aopen) | [Created Issues]
+Scrum Board: | [Assigned Issues](https://github.com/TristanCopley/photoboard/issues/assigned/TristanCopley) | [Assigned Issues](https://github.com/TristanCopley/photoboard/projects/2?card_filter_query=assignee%3Avalenreynolds)| [Assigned Issues](https://github.com/TristanCopley/photoboard/issues)| [Assigned Issues]
+GitHub commits: | [Repo Commits](https://github.com/TristanCopley/photoboard/commits?author=TristanCopley) | [Repo Commits](https://github.com/TristanCopley/photoboard/commits?author=ValenReynolds) | [Repo Commits](https://github.com/TristanCopley/photoboard/commits?author=IanHua14) | [Repo Commits]
+GitHub profile: | [Git Profile](https://github.com/TristanCopley) | [Git Profile](https://github.com/ValenReynolds) | [Git Profile](https://github.com/IanHua14) | [Git Profile](https://github.com/Abigail-Peltz)
 
 `Sponsored by Mr. Devlin`
