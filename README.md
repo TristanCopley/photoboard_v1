@@ -1,3 +1,12 @@
+---
+layout: default
+---
+{% include nav.html %}
+
+{% include_relative README.md %}
+
+
+
 # Photoboard: The best way to share your experiences!
 
 ## Table of Contents
