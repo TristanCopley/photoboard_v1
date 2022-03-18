@@ -7,8 +7,7 @@
   },
   "scripts": {
     "start": "node server.js",
-    "devStart": "nodemon server.js",
-    "build": "webpack"
+    "devStart": "nodemon server.js"
   },
   "description": "Webapp for displaying photos",
   "main": "server.js",
