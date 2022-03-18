@@ -12,17 +12,23 @@ const io = new Server(server);
 // build is for serving client code after it has been gulped or minified
 
 
-app.use(express.static('public/default')); // Using Dev for serving files
+app.use(express.static('public/root')); // Using Dev for serving files
 
-app.get('/signup', (req, res) => {
+app.get('/classes/', (req, res) => {
+    
+    res.sendFile(__dirname + '/public/admin/classes.html');
 
-    res.sendFile(__dirname + '/public/default/signup.html'); // Serves index.html
+});
+
+app.get('/signup/', (req, res) => {
+
+    res.sendFile(__dirname + '/public/root/signup.html');
 
 });
 
 app.get('/', (req, res) => {
 
-    res.sendFile(__dirname + '/public/default/index.html'); // Serves index.html
+    res.sendFile(__dirname + '/public/root/index.html');
 
 });
 
