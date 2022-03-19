@@ -32,7 +32,9 @@ body {
     ) repeat-x;
 
     position: absolute;
-    background-size: 400% 100%;
+    background-size: 400% 200%;
     animation: AnimationName 400s linear infinite;
+
+    overflow:hidden
 
 }
