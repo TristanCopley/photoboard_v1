@@ -10,8 +10,8 @@
 
 .login-container {
 
-    top: 2rem;
-    position: absolute;
+    top: 1rem;
+    position: relative;
     height: auto;
     margin: 1rem;
     width: 20rem;
