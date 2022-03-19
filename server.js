@@ -15,7 +15,7 @@ const io = new Server(server);
 app.use(express.static('public/root')); // Using Dev for serving files
 
 app.get('/classes/', (req, res) => {
-    
+
     res.sendFile(__dirname + '/public/admin/classes.html');
 
 });
