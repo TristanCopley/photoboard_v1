@@ -110,3 +110,8 @@ dist
 .idea/photoboard.iml
 .idea/runConfigurations.xml
 .idea/vcs.xml
+
+package-lock.json
+
+.idea
+
