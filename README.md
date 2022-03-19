@@ -43,6 +43,8 @@ The following bullets are requirements from our sponser Mr. Devlin:
 * A login for his students
 * A gallery for photos the students took
 * Allow access for the students to view all the photos.
+* Teacher can make assignments and announcements
+* Teacher can manage multiple classrooms
 
 ## Project History:
 This project begun at the start of Del Norte's third trimester. Written in pure HTML, CSS, and JavaScript, our project started from nothing but a blank slate. We are aiming for extreme quality and speed. We are using a web bundler called Webpack to make our code even more effecient. 
