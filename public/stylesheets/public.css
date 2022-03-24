@@ -1,3 +1,5 @@
+/* Huge Refactoring of website css please. Poorly cobbled together and does not play well with phones. Would like similar if not identical design to legacy login*/
+/* Errors about custom properties are a product of the main.css file not being linked. All colors used should be derived or declared from main.css for consistent coloring and ease of theming later down the road. */
 .login-wrapper {
 
     width: 100%;
@@ -5,7 +7,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    overflow:hidden
+    overflow: hidden
 
 }
 

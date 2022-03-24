@@ -1,7 +1,7 @@
 {
-  "name": "photoboard2",
+  "name": "photoboard",
   "version": "1.0.0",
-  "description": "## Table of Contents",
+  "description": "Photoboard: An app for students to share their work with peers and admins",
   "main": "index.js",
   "scripts": {
     "start": "nodemon server.js"
