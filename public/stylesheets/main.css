@@ -1,0 +1,42 @@
+/* colors */
+:root {
+    --bg-color-1: #19c7d9;
+    --bg-color-2: #0ed8ee;
+}
+
+/* font and size */
+* {
+
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+
+}
+
+body, html {
+
+    padding: 0;
+    margin: 0;
+    height: 100%; /* For some reason this is required for background*/
+
+}
+
+body {
+
+    background: repeating-linear-gradient(
+            45deg,
+            var(--bg-color-1),
+            var(--bg-color-1) 10px,
+            var(--bg-color-2) 10px,
+            var(--bg-color-2) 20px
+    );
+
+    position: absolute;
+    background-size: calc(100% + 425px) 100%;
+    animation: AnimationName 5s linear infinite; /* s is how fast it moves*/
+
+}
+
+@keyframes AnimationName {
+    0%{background-position: -425px 0}
+    100%{background-position: 0 0}
+} /* 85px are the correct spacing for lines */
