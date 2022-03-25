@@ -54,7 +54,7 @@ The following bullets are requirements from our sponser Mr. Devlin:
 * Allow access for the students to view all the photos.
 
 ## Project History:
-This project begun at the start of Del Norte's third trimester. Written in pure HTML, CSS, and JavaScript, our project started from nothing but a blank slate. We are aiming for extreme quality and speed. We are using a web bundler called Webpack to make our code even more effecient. 
+This project begun at the start of Del Norte's third trimester. Written in pure HTML, CSS, and JavaScript, our project started from nothing but a blank slate. We are aiming for extreme quality and speed. We are using a web bundler called Webpack to make our code even more efficient. 
 
 ## [Development Schedule and Timebox](https://github.com/TristanCopley/photoboard/wiki)
 
