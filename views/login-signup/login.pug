@@ -1,15 +1,16 @@
 extends layout
 
 block content
-    div(class='login-container')
-        form
-            h1 Log in to Photoboard
-            div(class='form-row')
-                input(class='form-input' type='text' id='login-input-username' placeholder=' ')
-                label(class='form-label' for='login-input-username') Username
-            div(class='form-row')
-                input(class='form-input' type='text' id='login-input-password' placeholder=' ')
-                label(class='form-label' for='login-input-password') Password
-            button(class='submit-btn' type='submit') Login
-        p(class='signup-text') Don't have an account?
-            a(href='/signup/') Sign Up
+    div(class='login-wrapper')
+        div(class='login-container')
+            form
+                h1 Log in to Photoboard
+                div(class='form-row')
+                    input(class='form-input' type='text' id='login-input-username' placeholder=' ')
+                    label(class='form-label' for='login-input-username') Username
+                div(class='form-row')
+                    input(class='form-input' type='password' id='login-input-password' placeholder=' ')
+                    label(class='form-label' for='login-input-password') Password
+                button(class='submit-btn' type='submit') Login
+            p(class='signup-text') Don't have an account?
+                a(href='/signup/')  Sign Up
