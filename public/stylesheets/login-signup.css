@@ -29,14 +29,6 @@ h1 {
 
 }
 
-h2 {
-
-    margin-top: 0;
-    font-size: 25px;
-    color: var(--primary-color-1);
-
-}
-
 .form-row {
 
     position: relative;
@@ -54,12 +46,6 @@ h2 {
     width: 100%;
     cursor: text;
     font-weight: bold;
-
-}
-
-#login-input-password {
-
-    letter-spacing: .1rem;
 
 }
 
@@ -129,5 +115,11 @@ h2 {
 
     text-decoration: none;
     color: var(--primary-color-1);
+
+}
+
+.signup-error {
+
+    display:none
 
 }

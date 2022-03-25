@@ -1,13 +1,39 @@
 extends layout
 
 block content
-    div(class='login-container')
-        form
-            h1 Signup for Photoboard
-            div(class='form-row')
-                input(class='form-input' type='text' id='login-input-username' placeholder=' ')
-                label(class='form-label' for='login-input-username') Username
-            div(class='form-row')
-                input(class='form-input' type='text' id='login-input-password' placeholder=' ')
-                label(class='form-label' for='login-input-password') Password
-            button(class='submit-btn' type='submit') Login
+    div(class='login-wrapper')
+        div(class='login-container')
+            forms
+                h1(class='login-title') Sign up for Photoboard
+
+                div(class='form-row')
+                    input(class='form-input' type='text' id='signup-input-firstName' placeholder=' ')
+                    label(class='form-label' for='signup-input-firstName') First Name
+
+                div(class='form-row')
+                    input(class='form-input' type='text' id='signup-input-lastName'  placeholder=' ')
+                    label(class='form-label' for='signup-input-lastName') Last Name
+
+                div(class='form-row')
+                    input(class='form-input' type='text' id='signup-input-schoolID' placeholder=' ')
+                    label(class='form-label' for='signup-input-schoolID') School ID
+
+                div(class='form-row')
+                    input(class='form-input' type='password' id='signup-input-password' placeholder=' ')
+                    label(class='form-label' for='signup-input-password') Password
+
+                div(class='form-row')
+                    input(class='form-input' type='password' id='signup-input-confirm-password' placeholder=' ')
+                    label(class='form-label' for='signup-input-confirm-password') Confirm Password
+
+                div(class='form-row')
+                    input(class='form-input' type='text' id='signup-input-classCode' placeholder=' ')
+                    label(class='form-label' for='signup-input-classCode') Class Code
+
+                h2(class='signup-error')= signupError
+
+                button(class='submit-btn' type='submit') Join
+
+    //-
+           Used in displaying to user what field they have filled incorrectly
+    script(src='/stylesheets/signupVerify.js')
