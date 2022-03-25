@@ -11,7 +11,8 @@ const io = new Server(server)
 //
 
 // Routes, allows for the photoboard/user/${name}
-let indexRouter = require('./routes/index');
+let loginRouter = require('./routes/login'); // Also index router
+let signupRouter = require('./routes/signup');
 // let usersRouter = require('./routes/users');
 
 // View engine setup, required for pug and rendering files
@@ -24,7 +25,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 //
 
 // Use routes
-app.use('/', indexRouter); // Using indexRouter in routes/index.js
+app.use('/', loginRouter); // Index in routes/login.js
+app.use('/signup', signupRouter); // Using indexRouter in routes/login.js
 //
 
 // Socket.io code:
@@ -34,7 +36,7 @@ app.use('/', indexRouter); // Using indexRouter in routes/index.js
 // Server start
 app.listen(port, () => {
 
-    console.log(`Photoboard server listening on http://${hostname}:${port}`)
+    console.log(`Photoboard server listening on https://${hostname}:${port}`)
 
 })
 //

@@ -103,8 +103,3 @@ h2 {
     text-decoration: none;
     color: var(--main-color-1);
 }
-
-@keyframes AnimationName {
-    0%{background-position:100% 50%}
-    100%{background-position:-33% 50%}
-}

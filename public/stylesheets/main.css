@@ -36,7 +36,7 @@ body {
 
     position: absolute;
     background-size: calc(100% + 425px) 100%; /* Calc is used for 100% of view size + pixels moved so there is no seam */
-    animation: scroll-background 5s linear infinite; /* s is how fast it moves*/
+    animation: scroll-background 20s linear infinite; /* s is how fast it moves*/
 
 }
 

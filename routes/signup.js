@@ -3,7 +3,9 @@ let router = express.Router();
 
 /* GET users listing. */
 router.get('/', function(req, res) {
-  res.send('respond with a resource');
+
+  res.render('login-signup/signup');
+  history.replaceState( {} , 'foo', '/foo' );
 });
 
 module.exports = router;
