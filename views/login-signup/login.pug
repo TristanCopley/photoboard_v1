@@ -2,8 +2,9 @@ extends layout
 
 block content
     div(class='login-wrapper')
+        div(class='space')
         div(class='login-container')
-            forms
+            form(method="post" action="/login")
                 h1(class='login-title') Log in to Photoboard
 
                 div(class='form-row')

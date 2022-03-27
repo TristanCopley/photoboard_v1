@@ -4,7 +4,7 @@ let router = express.Router();
 /* GET users listing. */
 router.get('/', function(req, res) {
 
-  res.render('login-signup/signup', { title: 'Photoboard | Sign up', signupError: 'none'});
+  res.render('login-signup/signup', { title: 'Join Photoboard' });
 
 });
 
