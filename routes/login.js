@@ -11,7 +11,7 @@ router.get('/', function(req, res) {
 router.post('/login', function(req, res) {
 
   // Get body properties, check hashed stuff with bcrypt yada yada
-  res.render('login-signup/signup', { title: 'Log into Photoboard' });
+  res.render('admin/admin-channel', { title: 'Log into Photoboard' });
 
 })
 
