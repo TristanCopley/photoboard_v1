@@ -12,7 +12,12 @@ router.get('/', function(req, res) {
 
 router.post('/signup', async (req, res) => {
 
-  console.log(req.body)
+  if(!(req.body.firstName.length > 1 &&
+      req.body.lastName.length > 1 &&
+      req.body.username.length === 7 &&
+      req.body.password.length > 3 &&
+      req.body.confirmPassword === req.body.password)
+  ) return res.render('login-signup/signup', { title: 'Join Photoboard', signup_error: 'One or more invalid forms.' });
 
   try {
 
@@ -30,15 +35,11 @@ router.post('/signup', async (req, res) => {
 
     users.push(user)
 
-    console.log(user);
-
-    console.log(users)
-
     res.redirect('/');
 
   } catch {
 
-    res.status(500).send();
+    res.render('login-signup/signup', { title: 'Join Photoboard', signup_error: 'An error occurred while creating account. Please try again.' });
 
   }
 

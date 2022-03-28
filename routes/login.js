@@ -6,7 +6,7 @@ let users = require('../mockDB.js'); // Where db should be
 /* Render Login page */
 router.get('/', function(req, res) {
 
-  res.render('login-signup/login', { title: 'Log into Photoboard' });
+  res.render('login-signup/login', { title: 'Log in to Photoboard' });
 
 });
 
@@ -16,7 +16,7 @@ router.post('/login', async function(req, res) {
 
   if(user === undefined) {
 
-    console.log('User not found');
+    return  res.render('login-signup/login', { title: 'Log in to Photoboard', login_error: 'Incorrect username or password.' });
 
   }
 
@@ -30,13 +30,13 @@ router.post('/login', async function(req, res) {
 
     else {
 
-
+      res.render('login-signup/login', { title: 'Log in to Photoboard', login_error: 'Incorrect username or password.' });
 
     }
 
   } catch {
 
-    res.status(500).send();
+    res.render('login-signup/login', { title: 'Log in to Photoboard', login_error: 'Incorrect username or password.' });
 
   }
 

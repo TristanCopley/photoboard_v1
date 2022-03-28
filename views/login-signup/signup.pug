@@ -16,8 +16,8 @@ block content
                     label(class='form-label' for='signup-input-lastName') Last Name
 
                 div(class='form-row')
-                    input(class='form-input' type='text' id='signup-input-schoolID' placeholder=' ' onpaste="return false" name='schoolID')
-                    label(class='form-label' for='signup-input-schoolID') School ID
+                    input(class='form-input' type='text' id='signup-input-username' placeholder=' ' onpaste="return false" name='username')
+                    label(class='form-label' for='signup-input-username') School ID
 
                 div(class='form-row')
                     input(class='form-input' type='password' id='signup-input-password' placeholder=' ' onpaste="return false" name='password')
@@ -31,9 +31,13 @@ block content
                     input(class='form-input' type='text' id='signup-input-classCode' placeholder=' ' onpaste="return false" name='classCode')
                     label(class='form-label' for='signup-input-classCode') Class Code
 
-                div(class='login-error-container')
-                                    p(class='login-error-text') One or more invalid forms.
+                div(class='login-error-container' id='signup_error')
+                                    p(class='login-error-text')= signup_error
 
-                button(class='submit-btn' type='submit') Join
+
+                button(class='submit-btn' type='submit' onclick='checkForm()') Join
+
                 p(class='signup-text') Already have an account?
                     a(href='/')  Log in.
+    script(src="/scripts/signup-verify.js")
+    button(onclick='checkForm()') Join

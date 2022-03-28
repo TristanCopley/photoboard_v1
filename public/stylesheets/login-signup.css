@@ -124,7 +124,7 @@ h1 {
 
 .login-error-container {
 
-    display: none;
+    display: block;
     margin-top: 2rem;
     margin-bottom: -1rem;
     text-align: center;
