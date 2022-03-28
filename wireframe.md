@@ -1,6 +1,4 @@
----
-layout: default
----
+
 {% include nav.html %}
 
 # Photoboard wirframe
