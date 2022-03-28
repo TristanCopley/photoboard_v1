@@ -4,18 +4,21 @@ block content
     div(class='login-wrapper')
         div(class='space')
         div(class='login-container')
-            form(method="post" action="/login")
+            form(method="post" action="login")
                 h1(class='login-title') Log in to Photoboard
 
+                div(class='login-error-container')
+                                    p(class='login-error-text') Incorrect username or password.
+
                 div(class='form-row')
-                    input(class='form-input' type='text' id='login-input-username' placeholder=' ')
+                    input(class='form-input' type='text' id='login-input-username' placeholder=' ' name='username')
                     label(class='form-label' for='login-input-username') Username
 
                 div(class='form-row')
-                    input(class='form-input' type='password' id='login-input-password' placeholder=' ')
+                    input(class='form-input' type='password' id='login-input-password' placeholder=' ' name='password')
                     label(class='form-label' for='login-input-password') Password
 
                 button(class='submit-btn' type='submit') Login
 
                 p(class='signup-text') Don't have an account?
-                    a(href='/signup/')  Sign Up
+                    a(href='/signup/')  Sign Up.

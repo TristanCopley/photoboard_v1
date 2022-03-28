@@ -1,5 +1,7 @@
-let express = require('express');
+const express = require('express');
+const bcrypt = require('bcrypt');
 let router = express.Router();
+let users = require('../mockDB.js'); // Where db should be
 
 /* Render Login page */
 router.get('/', function(req, res) {
@@ -8,10 +10,36 @@ router.get('/', function(req, res) {
 
 });
 
-router.post('/login', function(req, res) {
+router.post('/login', async function(req, res) {
 
-  // Get body properties, check hashed stuff with bcrypt yada yada
-  res.render('admin/admin-channel', { title: 'Log into Photoboard' });
+  const user = users.find(user => user.username === req.body.username);
+
+  if(user === undefined) {
+
+    console.log('User not found');
+
+  }
+
+  try {
+
+    if(await bcrypt.compare(req.body.password, user.password)) {
+
+      console.log('success');
+
+    }
+
+    else {
+
+
+
+    }
+
+  } catch {
+
+    res.status(500).send();
+
+  }
+
 
 })
 

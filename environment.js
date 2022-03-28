@@ -1,6 +1,7 @@
 module.exports = env = {
 
     host: 'localhost',
-    salt: '3cfe866c143b814c42f92e629b6812f8b85c6eba1ae09ac0e65b2285a29978bc'
+    privateKey: '7ef74cd7f998e060041a2d74e08caf7c608919062ffe76eca7543f5c3c7e00e7'
 
 }
+// Never commit this file as it contains information that will risk user and server security

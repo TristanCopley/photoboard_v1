@@ -1,3 +1,5 @@
+@import "main.css"; /* Imports main.css which is required for all pages */
+
 .login-wrapper {
 
     width: 100vw;
@@ -93,6 +95,7 @@ h1 {
     background: var(--primary-color-1);
     color: white;
     border: 0;
+    box-shadow: rgba(50, 50, 93, 0.25) 0 13px 27px -5px, rgba(0, 0, 0, 0.3) 0 8px 16px -8px;
 
 }
 
@@ -119,8 +122,20 @@ h1 {
 
 }
 
-.signup-error {
+.login-error-container {
 
-    display:none
+    display: none;
+    margin-top: 2rem;
+    margin-bottom: -1rem;
+    text-align: center;
+    background-color: #ff4e4e;
+
+}
+
+.login-error-text {
+
+    color: #ffffff;
+    display: block;
+    font-weight: bolder;
 
 }
