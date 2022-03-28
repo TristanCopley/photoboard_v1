@@ -28,8 +28,8 @@ block content
                     label(class='form-label' for='signup-input-confirm-password') Confirm Password
 
                 div(class='form-row')
-                    input(class='form-input' type='text' id='signup-input-classCode' placeholder=' ' onpaste="return false" name='classCode')
-                    label(class='form-label' for='signup-input-classCode') Class Code
+                    input(class='form-input' type='text' id='signup-input-class-code' placeholder=' ' onpaste="return false" name='classCode')
+                    label(class='form-label' for='signup-input-class-code') Class Code
 
                 div(class='login-error-container' id='signup_error')
                                     p(class='login-error-text')= signup_error
@@ -39,5 +39,5 @@ block content
 
                 p(class='signup-text') Already have an account?
                     a(href='/')  Log in.
+//-
     script(src="/scripts/signup-verify.js")
-    button(onclick='checkForm()') Join

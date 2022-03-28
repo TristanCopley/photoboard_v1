@@ -25,6 +25,7 @@ router.post('/login', async function(req, res) {
     if(await bcrypt.compare(req.body.password, user.password)) {
 
       console.log('success');
+      res.render('admin/admin-channel', { title: 'admin'})
 
     }
 
