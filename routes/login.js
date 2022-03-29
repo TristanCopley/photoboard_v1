@@ -6,23 +6,29 @@ let users = require('../mockDB.js'); // Where db should be
 /* Render Login page */
 router.get('/', function(req, res) {
 
-  res.render('login-signup/login', { title: 'Log in to Photoboard' });
+  res.render('login-signup/login', {
+
+    title: 'Log in to Photoboard',
+    populateEmail: req.body.email,
+    populatePassword: req.body.password
+
+  });
 
 });
 
-router.post('/login', async function(req, res) {
+router.post('/', async function(req, res) {
 
-  const user = users.find(user => user.username === req.body.username);
+  const user = users.find(user => user.email === req.body.email);
 
   if( user === undefined ) {
 
     return  res.render('login-signup/login', {
 
       title: 'Log in to Photoboard',
-      login_error: 'Incorrect username or password.',
-      populateUsername: req.body.username,
+      login_error: 'Incorrect email or password.',
+      populateEmail: req.body.email,
       populatePassword: req.body.password,
-      usernameColor: 'red',
+      emailColor: 'red',
       passwordColor: 'red'
 
     });
@@ -42,10 +48,10 @@ router.post('/login', async function(req, res) {
       return  res.render('login-signup/login', {
 
         title: 'Log in to Photoboard',
-        login_error: 'Incorrect username or password.',
-        populateUsername: req.body.username,
+        login_error: 'Incorrect email or password.',
+        populateEmail: req.body.email,
         populatePassword: req.body.password,
-        usernameColor: 'red',
+        emailColor: 'red',
         passwordColor: 'red'
 
       });
@@ -58,7 +64,7 @@ router.post('/login', async function(req, res) {
 
       title: 'Log in to Photoboard',
       login_error: 'Failed login. Try again.',
-      populateUsername: req.body.username,
+      populateEmail: req.body.email,
       populatePassword: req.body.password
 
     });

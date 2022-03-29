@@ -6,11 +6,15 @@ let users = require('../mockDB.js'); // Where db should be
 /* GET users listing. */
 router.get('/', function(req, res) {
 
-  res.render('login-signup/signup', { title: 'Join Photoboard' });
+  res.render('login-signup/signup', {
+
+    title: 'Join Photoboard'
+
+  });
 
 });
 
-router.post('/signup', async (req, res) => {
+router.post('/', async (req, res) => {
 
   // Guard Clause
 
@@ -18,7 +22,7 @@ router.post('/signup', async (req, res) => {
 
       !(req.body.firstName.length > 1 &&
       req.body.lastName.length > 1 &&
-      req.body.username.length === 7 &&
+      req.body.email.length === 7 &&
       req.body.password.length > 3 &&
       req.body.confirmPassword === req.body.password)
 
@@ -37,7 +41,7 @@ router.post('/signup', async (req, res) => {
 
     let user = {
 
-      username: req.body.username,
+      email: req.body.email,
       password: hashedPassword,
       firstName: req.body.firstName,
       lastName: req.body.lastName,
