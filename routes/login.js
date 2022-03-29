@@ -14,30 +14,54 @@ router.post('/login', async function(req, res) {
 
   const user = users.find(user => user.username === req.body.username);
 
-  if(user === undefined) {
+  if( user === undefined ) {
 
-    return  res.render('login-signup/login', { title: 'Log in to Photoboard', login_error: 'Incorrect username or password.' });
+    return  res.render('login-signup/login', {
+
+      title: 'Log in to Photoboard',
+      login_error: 'Incorrect username or password.',
+      populateUsername: req.body.username,
+      populatePassword: req.body.password,
+      usernameColor: 'red',
+      passwordColor: 'red'
+
+    });
 
   }
 
   try {
 
-    if(await bcrypt.compare(req.body.password, user.password)) {
+    if( await bcrypt.compare(req.body.password, user.password) ) {
 
-      console.log('success');
       res.render('admin/admin-channel', { title: 'admin'})
 
     }
 
     else {
 
-      res.render('login-signup/login', { title: 'Log in to Photoboard', login_error: 'Incorrect username or password.' });
+      return  res.render('login-signup/login', {
+
+        title: 'Log in to Photoboard',
+        login_error: 'Incorrect username or password.',
+        populateUsername: req.body.username,
+        populatePassword: req.body.password,
+        usernameColor: 'red',
+        passwordColor: 'red'
+
+      });
 
     }
 
   } catch {
 
-    res.render('login-signup/login', { title: 'Log in to Photoboard', login_error: 'Incorrect username or password.' });
+    return  res.render('login-signup/login', {
+
+      title: 'Log in to Photoboard',
+      login_error: 'Failed login. Try again.',
+      populateUsername: req.body.username,
+      populatePassword: req.body.password
+
+    });
 
   }
 

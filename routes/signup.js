@@ -12,17 +12,29 @@ router.get('/', function(req, res) {
 
 router.post('/signup', async (req, res) => {
 
-  if(!(req.body.firstName.length > 1 &&
+  // Guard Clause
+
+  if(
+
+      !(req.body.firstName.length > 1 &&
       req.body.lastName.length > 1 &&
       req.body.username.length === 7 &&
       req.body.password.length > 3 &&
       req.body.confirmPassword === req.body.password)
-  ) return res.render('login-signup/signup', { title: 'Join Photoboard', signup_error: 'One or more invalid forms.' });
+
+  ) return res.render('login-signup/signup', {
+
+      title: 'Join Photoboard',
+      signup_error: 'One or more invalid forms.',
+      firstNameColor: 'red' // For example
+
+    });
 
   try {
 
     const salt = await bcrypt.genSalt();
     const hashedPassword = await bcrypt.hash(req.body.password, salt);
+
     let user = {
 
       username: req.body.username,
@@ -35,11 +47,16 @@ router.post('/signup', async (req, res) => {
 
     users.push(user)
 
-    res.redirect('/');
+    return res.redirect('/');
 
   } catch {
 
-    res.render('login-signup/signup', { title: 'Join Photoboard', signup_error: 'An error occurred while creating account. Please try again.' });
+    return res.render('login-signup/signup', {
+
+      title: 'Join Photoboard',
+      signup_error: 'An error occurred while creating account. Please try again.'
+
+    });
 
   }
 

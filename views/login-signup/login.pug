@@ -11,11 +11,11 @@ block content
                                     p(class='login-error-text' name='loginErrorText')= login_error
 
                 div(class='form-row')
-                    input(class='form-input' type='text' id='login-input-username' placeholder=' ' name='username')
+                    input(class='form-input' type='text' id='login-input-username' placeholder=' ' name='username' value= populateUsername style='border-bottom-color: ' + usernameColor)
                     label(class='form-label' for='login-input-username') Username
 
                 div(class='form-row')
-                    input(class='form-input' type='password' id='login-input-password' placeholder=' ' name='password')
+                    input(class='form-input' type='password' id='login-input-password' placeholder=' ' name='password' value= populatePassword style='border-bottom-color: ' + passwordColor)
                     label(class='form-label' for='login-input-password') Password
 
                 button(class='submit-btn' type='submit') Login
