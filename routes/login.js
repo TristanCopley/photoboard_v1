@@ -22,7 +22,7 @@ router.post('/', async function(req, res) {
 
   if( user === undefined ) {
 
-    return  res.render('login-signup/login', {
+    return res.render('login-signup/login', {
 
       title: 'Log in to Photoboard',
       login_error: 'Incorrect email or password.',
@@ -39,13 +39,17 @@ router.post('/', async function(req, res) {
 
     if( await bcrypt.compare(req.body.password, user.password) ) {
 
-      res.render('admin/admin-channel', { title: 'admin'})
+      res.render('admin/admin-channel', {
+
+        title: 'admin'
+
+      })
 
     }
 
     else {
 
-      return  res.render('login-signup/login', {
+      return res.render('login-signup/login', {
 
         title: 'Log in to Photoboard',
         login_error: 'Incorrect email or password.',
@@ -60,7 +64,7 @@ router.post('/', async function(req, res) {
 
   } catch {
 
-    return  res.render('login-signup/login', {
+    return res.render('login-signup/login', {
 
       title: 'Log in to Photoboard',
       login_error: 'Failed login. Try again.',

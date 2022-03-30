@@ -16,21 +16,81 @@ router.get('/', function(req, res) {
 
 router.post('/', async (req, res) => {
 
-  // Guard Clause
+  let invalidFormError = '';
+  let firstNameColor = 'lightgrey';
+  let lastNameColor = 'lightgrey';
+  let emailColor = 'lightgrey';
+  let passwordColor = 'lightgrey';
+  let confirmPasswordColor = 'lightgrey';
+  let classCodeColor = 'lightgrey';
 
-  if(
+  if (req.body.firstName.length < 1) { invalidFormError = 'First name is not filled out.';
+    firstNameColor = 'red';}
 
-      !(req.body.firstName.length > 1 &&
-      req.body.lastName.length > 1 &&
-      req.body.email.length === 7 &&
-      req.body.password.length > 3 &&
-      req.body.confirmPassword === req.body.password)
+  if (req.body.lastName.length < 1) {
+    lastNameColor = 'red';
+    if (invalidFormError !== '') {
+      invalidFormError = 'Multiple invalid forms.'
+    } else {
+      invalidFormError = 'Last name is not filled out.'
+    } }
 
-  ) return res.render('login-signup/signup', {
+  if (req.body.email < 6) {
+    emailColor = 'red';
+    if (invalidFormError !== '') {
+      invalidFormError = 'Multiple invalid forms.'
+    } else {
+      invalidFormError = 'Your email is not filled out.'
+    } } else {
+    if (!(req.body.email.includes('@') && req.body.email.includes('.'))) {
+      emailColor = 'red';
+      if (invalidFormError !== '') {
+        invalidFormError = 'Multiple invalid forms.'
+      } else {
+        invalidFormError = 'Email is invalid' } } }
 
-      title: 'Join Photoboard',
-      signup_error: 'One or more invalid forms.',
-      firstNameColor: 'red' // For example
+  if (req.body.password.length < 5) {
+    passwordColor = 'red';
+    if (invalidFormError !== '') {
+      invalidFormError = 'Multiple invalid forms.'
+    } else {
+      invalidFormError = 'Your password is too short.'
+    } }
+
+  if (req.body.confirmPassword !== req.body.password || req.body.confirmPassword < 5) {
+    confirmPasswordColor = 'red';
+    if (invalidFormError !== '') {
+      invalidFormError = 'Multiple invalid forms.'
+    } else {
+      invalidFormError = 'Your passwords do not match'
+    } }
+
+  if (req.body.classCode.length !== 5) {
+    classCodeColor = 'red';
+    if (invalidFormError !== '') {
+      invalidFormError = 'Multiple invalid forms.'
+    } else {
+      invalidFormError = 'That class does not exist.'
+    } }
+
+  if( invalidFormError !== '') return res.render('login-signup/signup', {
+
+    title: 'Join Photoboard',
+    signup_error: invalidFormError,
+
+    populateFirstName: req.body.firstName,
+    populateLastName: req.body.lastName,
+    populateEmail: req.body.email,
+    populatePassword: req.body.password,
+    populateConfirmPassword: req.body.confirmPassword,
+    populateClassCode: req.body.classCode,
+
+    firstNameColor: firstNameColor,
+    lastNameColor: lastNameColor,
+    emailColor: emailColor,
+    passwordColor: passwordColor,
+    confirmPasswordColor: confirmPasswordColor,
+    classCodeColor: classCodeColor
 
     });
 
@@ -48,6 +108,8 @@ router.post('/', async (req, res) => {
       classCode: req.body.classCode
 
     };
+
+    console.log(user)
 
     users.push(user)
 
