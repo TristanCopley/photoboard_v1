@@ -39,11 +39,20 @@ router.post('/', async function(req, res) {
 
     if( await bcrypt.compare(req.body.password, user.password) ) {
 
-      res.render('admin/admin-channel', {
+      if ( user.classCode[0] === 'admin') {
 
-        title: 'admin'
+        res.render('admin/admin-channel', {
 
-      })
+          title: 'admin',
+          class
+
+        })
+
+      } else {
+
+
+
+      }
 
     }
 
