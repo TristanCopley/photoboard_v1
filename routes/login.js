@@ -41,16 +41,11 @@ router.post('/', async function(req, res) {
 
       if ( user.classCode[0] === 'admin') {
 
-        res.render('admin/admin-channel', {
-
-          title: 'admin',
-          class
-
-        })
+        res.redirect('/admin')
 
       } else {
 
-
+        res.redirect('/student')
 
       }
 

@@ -4,7 +4,7 @@ let router = express.Router();
 /* GET users listing. */
 router.get('/', function(req, res) {
 
-    res.render('admin/channel', { title: 'Admin view' });
+    res.render('student/channel', { title: 'Photoboard' });
 
 });
 

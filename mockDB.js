@@ -10,7 +10,6 @@ module.exports = users = [
         classCode: [
             '12345'
         ],
-
     },
 
     {
@@ -26,6 +25,7 @@ module.exports = users = [
 
 
 ]
+/*
 
 module.exports = classes = [
 
@@ -80,7 +80,6 @@ module.exports = classes = [
                 type: 'message',
                 id: '0'
 
-
             }
 
         ]
@@ -92,3 +91,4 @@ module.exports = classes = [
 
 ]
 
+*/

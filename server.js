@@ -1,6 +1,7 @@
 // Add packages and create server
 const env = require('./environment');
 const express = require('express');
+const session = require('express-session')
 const port = process.env.PORT || 3000;
 const app = express();
 const http = require('http');
@@ -18,6 +19,7 @@ app.use(express.json());
 let loginRouter = require('./routes/login'); // Also index router
 let signupRouter = require('./routes/signup');
 let adminRouter = require('./routes/admin');
+let studentRouter = require('./routes/student');
 
 // View engine setup, required for pug and rendering files
 app.set('views', path.join(__dirname, 'views'));
@@ -27,9 +29,10 @@ app.set('view engine', 'pug');
 app.use(express.static(path.join(__dirname, 'public')));
 
 // Use routes
-app.use('/', loginRouter); // Index in routes/login.js
-app.use('/signup', signupRouter); // Using indexRouter in routes/login.js
-app.use('/admin', adminRouter); // Using indexRouter in routes/login.js
+app.use('/', loginRouter); // Using indexRouter in routes/login.js
+app.use('/signup', signupRouter);
+app.use('/admin', adminRouter);
+app.use('/student', adminRouter);
 
 // Socket.io code:
 // Empty

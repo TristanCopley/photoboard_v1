@@ -109,7 +109,7 @@ router.post('/', async (req, res) => {
 
     };
 
-    console.log(user)
+    console.log(user) // Used for testing purposes
 
     users.push(user)
 

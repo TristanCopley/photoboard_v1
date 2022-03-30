@@ -1,0 +1,8 @@
+@import "main.css"; /* Imports main.css which is required for all pages */
+
+.channel-wrapper {
+
+    display: grid;
+    column-gap: 1rem;
+
+}
