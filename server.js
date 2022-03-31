@@ -11,6 +11,19 @@ const path = require("path");
 const hostname =  env.host;
 const io = new Server(server);
 
+const utils = require('./utils'); // Utility js for putting function you may need
+
+let sess = {
+
+    secret: env.secretKey,
+    cookie: {},
+    saveUninitialized: true,     // forces the session that is "uninitialized" to be saved to the store
+    resave: false                // forces the session to be saved back to the session store, even if a session was not modified by request
+
+};
+
+app.use(session(sess));
+
 // Middleware
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
@@ -32,10 +45,24 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', loginRouter); // Using indexRouter in routes/login.js
 app.use('/signup', signupRouter);
 app.use('/admin', adminRouter);
-app.use('/student', adminRouter);
+app.use('/student', studentRouter);
 
 // Socket.io code:
 // Empty
+
+// Below is example code on how to use sessions while i try and grasp it
+/*app.get('/session', function (req, res) {
+    if (req.session.page_views) {
+        // incrementing the page views counter by 1
+        req.session.page_views++;
+        res.status(200).json({info: `Welcome to this tutorial. Visit counter : ${req.session.page_views}`});
+    } else {
+        // introductory request
+        // setting the page views counter to 1
+        req.session.page_views = 1;
+        res.status(200).json({info: 'Welcome to this tutorial for the first time'});
+    }
+});*/
 
 // Server start
 app.listen(port, () => {
