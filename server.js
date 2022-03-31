@@ -47,6 +47,7 @@ app.use('/signup', signupRouter);
 app.use('/admin', adminRouter);
 app.use('/student', studentRouter);
 
+
 // Socket.io code:
 // Empty
 
@@ -70,3 +71,29 @@ app.listen(port, () => {
     console.log(`Photoboard server listening on http://${hostname}:${port}`)
 
 })
+
+// Error detection
+server.on('error', (error) => {
+
+    // handle specific listen errors with friendly messages
+    switch (error.code) {
+
+        case 'EACCES':
+            console.error('Port: ' + port + ' requires elevated privileges');
+            process.exit(1);
+            break;
+
+        case 'EADDRINUSE':
+            console.error('Port: ' + port + ' is already in use');
+            process.exit(1);
+            break;
+
+        default:
+            throw error;
+    }
+
+
+});
+
+// 404 page
+app.use((req, res) => { res.status(404).render('404') });

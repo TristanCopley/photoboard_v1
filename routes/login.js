@@ -1,7 +1,7 @@
 const express = require('express');
 const bcrypt = require('bcrypt');
 let router = express.Router();
-let users = require('../mockDB.js'); // Where db should be
+let { users } = require('../mockDB.js'); // Where db should be
 
 /* Render Login page */
 router.get('/', function(req, res) {
@@ -41,11 +41,11 @@ router.post('/', async function(req, res) {
 
       if ( user.classCode[0] === 'admin') {
 
-        res.redirect('/admin')
+        res.redirect('/admin/classes/') // Send to admin page
 
       } else {
 
-        res.redirect('/student')
+        res.redirect('/student/') // Send to student page
 
       }
 

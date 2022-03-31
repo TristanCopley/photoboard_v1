@@ -13,6 +13,7 @@
     "bcrypt": "^5.0.1",
     "express": "^4.17.3",
     "express-session": "^1.17.2",
+    "jsonwebtoken": "^8.5.1",
     "nodemon": "^2.0.15",
     "pug": "^3.0.2",
     "socket.io": "^4.4.1"

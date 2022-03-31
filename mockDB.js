@@ -1,6 +1,6 @@
 // Mock database for server testing
 
-module.exports = users = [
+module.exports.users = [
 
     {
         email: 'student@photoboard.com',
@@ -25,9 +25,8 @@ module.exports = users = [
 
 
 ]
-/*
 
-module.exports = classes = [
+module.exports.classes = [
 
     {
         image: 'IMAGE_DATA_HERE',
@@ -90,5 +89,3 @@ module.exports = classes = [
     }
 
 ]
-
-*/

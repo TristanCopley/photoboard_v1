@@ -21,6 +21,7 @@ body, html {
     padding: 0;
     margin: 0;
     height: 100%; /* For some reason this is required for background */
+    overflow-x: hidden; /* Remove horizontal scrollbar that can appear if the conditions are right*/
 
 }
 

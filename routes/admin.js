@@ -1,10 +1,15 @@
 let express = require('express');
 let router = express.Router();
 
-/* GET users listing. */
 router.get('/', function(req, res) {
 
     res.render('admin/channel', { title: 'Admin view' });
+
+});
+
+router.get('/classes/', function(req, res) {
+
+    res.render('admin/classes', { title: 'Admin view' });
 
 });
 
