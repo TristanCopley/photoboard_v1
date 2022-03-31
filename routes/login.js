@@ -1,7 +1,5 @@
 const express = require('express');
 const bcrypt = require('bcrypt');
-const env = require('../environment');
-const jwt = require('jsonwebtoken');
 let router = express.Router();
 let { users } = require('../mockDB.js'); // Where db should be
 const { tokenCreate, createLoginCookie, loginWithCookie } = require("../utils");
@@ -9,11 +7,11 @@ const { tokenCreate, createLoginCookie, loginWithCookie } = require("../utils");
 /* Render Login page */
 router.get('/', async function(req, res) {
 
-  loginWithCookie(users, req, res).then(r => {}).catch(r => {
+  loginWithCookie(users, req, res).then(() => {}).catch(() => {
 
     res.render('login-signup/login', { title: 'Log in to Photoboard'});
 
-  })
+  });
 
 });
 
@@ -39,6 +37,10 @@ router.post('/', async function(req, res) {
   try {
 
     if(await bcrypt.compare(req.body.password, user.password)) {
+
+      req.session.user = user;
+
+      console.log(user)
 
       // Sets session token on login
       tokenCreate(req);

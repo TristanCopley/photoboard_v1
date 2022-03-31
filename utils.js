@@ -1,13 +1,11 @@
 const jwt = require('jsonwebtoken');
 const env = require('./environment');
-const Cryptr = require('cryptr');
-const bcrypt = require("bcrypt");
 
 function tokenCreate(req) {
 
     req.session.token = jwt.sign({
         authorized: 'true'
-    }, env.secretKey, { expiresIn: 900 }); // Expires in 15 minutes
+    }, env.secretKey, { expiresIn: 1 }); // Expires in 15 minutes
 
 }
 
@@ -18,13 +16,26 @@ function tokenVerifier(req, res, next) {
 
         if (jwt.verify(req.session.token, env.secretKey).authorization === 'true') {}
 
+        if (req.session.user) {}
+
         tokenCreate(req);
 
         return next();
 
-    } catch {
+    } catch(err) {
 
-        return res.render('inactive');
+        if (err.name === 'TokenExpiredError') {
+
+            return res.render('inactive');
+
+        }
+
+        return res.render('login-signup/login', {
+
+            title: 'Log in to Photoboard',
+            login_error: 'You are not authorized to view that page.',
+
+        });
 
     }
 
@@ -52,6 +63,8 @@ async function loginWithCookie(users, req, res) {
         };
 
         const user = users.find(user => user.email === cookie.email);
+
+        req.session.user = user;
 
         if(user.password === cookie.password) {
 

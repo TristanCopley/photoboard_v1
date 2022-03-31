@@ -3,7 +3,10 @@ let router = express.Router();
 
 router.get('/classes/', function(req, res) {
 
-    res.render('admin/classes', { title: 'Classes' });
+    res.render('admin/classes', {
+        title: 'Classes',
+        classes: req.session.user.classes
+    });
 
 });
 
