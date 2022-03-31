@@ -1,24 +1,69 @@
 const jwt = require('jsonwebtoken');
 const env = require('./environment');
 
-function tokenCreate(req) {
+function tokenCreate(req, res) {
 
-    req.session.token = jwt.sign({
-        authorized: 'true'
-    }, env.secretKey, { expiresIn: 1 }); // Expires in 15 minutes
+    try {
+
+        req.session.token = jwt.sign({
+            authorized: 'true',
+            role: req.session.user.classes[0] === 'admin' ? 'admin' : 'student'
+        }, env.secretKey, { expiresIn: 9000 }); // Expires in 15 minutes
+
+    } catch {
+
+        return res.status(404).render('404')
+
+    }
 
 }
 
-function tokenVerifier(req, res, next) {
+function tokenVerifierAdmin(req, res, next) {
 
     // Replace req.session.token with a number to test inactive status
     try {
 
-        if (jwt.verify(req.session.token, env.secretKey).authorization === 'true') {}
+        let payload = jwt.verify(req.session.token, env.secretKey)
+
+        if (payload.authorization === 'true' && payload.role === 'admin') {}
 
         if (req.session.user) {}
 
-        tokenCreate(req);
+        tokenCreate(req, res);
+
+        return next();
+
+    } catch(err) {
+
+        if (err.name === 'TokenExpiredError') {
+
+            return res.render('inactive');
+
+        }
+
+        return res.render('login-signup/login', {
+
+            title: 'Log in to Photoboard',
+            login_error: 'You are not authorized to view that page.',
+
+        });
+
+    }
+
+}
+
+function tokenVerifierStudent(req, res, next) {
+
+    // Replace req.session.token with a number to test inactive status
+    try {
+
+        let payload = jwt.verify(req.session.token, env.secretKey)
+
+        if (payload.authorization === 'true' && payload.role === 'student') {}
+
+        if (req.session.user) {}
+
+        tokenCreate(req, res);
 
         return next();
 
@@ -64,28 +109,34 @@ async function loginWithCookie(users, req, res) {
 
         const user = users.find(user => user.email === cookie.email);
 
-        req.session.user = user;
-
         if(user.password === cookie.password) {
 
-            // Sets session token on login
-            tokenCreate(req);
-
-            createLoginCookie(user, req, res);
-
-            if ( user.classCode[0] === 'admin') {
-
-                return res.redirect('/admin/classes/') // Send to admin page
-
-            } else {
-
-                return res.redirect('/student/') // Send to student page
-
-            }
+            onLogin(user, req, res);
 
         }
 
 }
 
-module.exports = { tokenCreate, tokenVerifier, createLoginCookie, loginWithCookie};
+function onLogin(user, req, res) {
+
+    req.session.user = user;
+
+    // Sets session token on login
+    tokenCreate(req, res);
+
+    createLoginCookie(user, req, res);
+
+    if ( user.classes[0] === 'admin') {
+
+        return res.redirect('/admin/classes/') // Send to admin page
+
+    } else {
+
+        return res.redirect('/student/') // Send to student page
+
+    }
+
+}
+
+module.exports = { tokenVerifierAdmin, tokenVerifierStudent, loginWithCookie, onLogin};
 

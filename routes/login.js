@@ -2,7 +2,7 @@ const express = require('express');
 const bcrypt = require('bcrypt');
 let router = express.Router();
 let { users } = require('../mockDB.js'); // Where db should be
-const { tokenCreate, createLoginCookie, loginWithCookie } = require("../utils");
+const { loginWithCookie, onLogin} = require("../utils");
 
 /* Render Login page */
 router.get('/', async function(req, res) {
@@ -38,24 +38,7 @@ router.post('/', async function(req, res) {
 
     if(await bcrypt.compare(req.body.password, user.password)) {
 
-      req.session.user = user;
-
-      console.log(user)
-
-      // Sets session token on login
-      tokenCreate(req);
-
-      createLoginCookie(user, req, res);
-
-      if ( user.classCode[0] === 'admin') {
-
-        return res.redirect('/admin/classes/') // Send to admin page
-
-      } else {
-
-        return res.redirect('/student/') // Send to student page
-
-      }
+      onLogin(user, req, res);
 
     }
 
