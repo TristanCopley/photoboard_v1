@@ -1,7 +1,10 @@
 const express = require('express');
 const bcrypt = require('bcrypt');
+const env = require('../environment');
+const jwt = require('jsonwebtoken');
 let router = express.Router();
 let { users } = require('../mockDB.js'); // Where db should be
+const { tokenCreate } = require("../utils");
 
 /* Render Login page */
 router.get('/', function(req, res) {
@@ -37,15 +40,20 @@ router.post('/', async function(req, res) {
 
   try {
 
-    if( await bcrypt.compare(req.body.password, user.password) ) {
+    if(await bcrypt.compare(req.body.password, user.password)) {
+
+      // Sets session token on login
+      tokenCreate(req);
+
+      res.cookie('important', 3, { maxAge: 900000, httpOnly: true })
 
       if ( user.classCode[0] === 'admin') {
 
-        res.redirect('/admin/classes/') // Send to admin page
+        return res.redirect('/admin/classes/') // Send to admin page
 
       } else {
 
-        res.redirect('/student/') // Send to student page
+        return res.redirect('/student/') // Send to student page
 
       }
 

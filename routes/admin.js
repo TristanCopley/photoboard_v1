@@ -1,15 +1,15 @@
 let express = require('express');
 let router = express.Router();
 
-router.get('/', function(req, res) {
+router.get('/classes/', function(req, res) {
 
-    res.render('admin/channel', { title: 'Admin view' });
+    res.render('admin/classes', { title: 'Classes' });
 
 });
 
-router.get('/classes/', function(req, res) {
+router.get('/', function(req, res) {
 
-    res.render('admin/classes', { title: 'Admin view' });
+    res.render('admin/channel', { title: 'Admin view' });
 
 });
 
