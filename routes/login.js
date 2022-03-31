@@ -4,18 +4,16 @@ const env = require('../environment');
 const jwt = require('jsonwebtoken');
 let router = express.Router();
 let { users } = require('../mockDB.js'); // Where db should be
-const { tokenCreate } = require("../utils");
+const { tokenCreate, createLoginCookie, loginWithCookie } = require("../utils");
 
 /* Render Login page */
-router.get('/', function(req, res) {
+router.get('/', async function(req, res) {
 
-  res.render('login-signup/login', {
+  loginWithCookie(users, req, res).then(r => {}).catch(r => {
 
-    title: 'Log in to Photoboard',
-    populateEmail: req.body.email,
-    populatePassword: req.body.password
+    res.render('login-signup/login', { title: 'Log in to Photoboard'});
 
-  });
+  })
 
 });
 
@@ -45,7 +43,7 @@ router.post('/', async function(req, res) {
       // Sets session token on login
       tokenCreate(req);
 
-      res.cookie('important', 3, { maxAge: 900000, httpOnly: true })
+      createLoginCookie(user, req, res);
 
       if ( user.classCode[0] === 'admin') {
 

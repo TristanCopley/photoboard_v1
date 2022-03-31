@@ -2,7 +2,7 @@
 const env = require('./environment');
 const express = require('express');
 const session = require('express-session');
-const cookieParser = require('cookie-parser')
+const cookieParser = require("cookie-parser");
 const port = process.env.PORT || 3000;
 const app = express();
 const http = require('http');
@@ -20,11 +20,10 @@ const sess = {
     saveUninitialized: true,
 }
 
-app.use(session(sess));
-
 // Middleware
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+app.use(session(sess));
 app.use(cookieParser());
 
 // Routes, allows for the photoboard/user/${name}
@@ -41,7 +40,7 @@ app.set('view engine', 'pug');
 app.use(express.static(path.join(__dirname, 'public')));
 
 // Use routes
-app.use('/', loginRouter); // Using indexRouter in routes/login.js
+app.use('/',loginRouter); // Using indexRouter in routes/login.js
 app.use('/signup', signupRouter);
 app.use('/admin', tokenVerifier, adminRouter);
 app.use('/student', tokenVerifier, studentRouter);
@@ -74,6 +73,7 @@ server.on('error', (error) => {
 
         default:
             throw error;
+
     }
 
 
