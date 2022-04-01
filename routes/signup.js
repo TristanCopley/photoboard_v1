@@ -105,7 +105,7 @@ router.post('/', async (req, res) => {
       password: hashedPassword,
       firstName: req.body.firstName,
       lastName: req.body.lastName,
-      classCode: req.body.classCode
+      classes: req.body.classCode
 
     };
 

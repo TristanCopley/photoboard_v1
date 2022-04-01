@@ -40,12 +40,14 @@ router.post('/', async function(req, res) {
 
     if(await bcrypt.compare(req.body.password, user.password)) {
 
+      req.session.user = user;
+
       // Sets session token on login
       tokenCreate(req);
 
       createLoginCookie(user, req, res);
 
-      if ( user.classCode[0] === 'admin') {
+      if ( user.classes[0] === 'admin') {
 
         return res.redirect('/admin/classes/') // Send to admin page
 

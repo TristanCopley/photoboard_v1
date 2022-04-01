@@ -7,7 +7,7 @@ module.exports.users = [
         password: '$2b$10$.3t/.DM3NbKu8Cl0I88l2eorrhxaVoXzimo8BoccjO9Cc7c4lXvge', // student
         firstName: 'Jason',
         lastName: 'Gerardi',
-        classCode: [
+        classes: [
             '12345'
         ],
     },
@@ -17,7 +17,7 @@ module.exports.users = [
         password: '$2b$10$toyWfmoC7iY.WC/eMSwhwelm4J415oHowDwUBza3rOfJ0zh7vFrJi', // admin
         firstName: 'Tristan',
         lastName: 'Copley',
-        classCode: [
+        classes: [
             'admin',
             '12345'
         ]
