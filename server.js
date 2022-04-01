@@ -11,7 +11,7 @@ const { Server } = require("socket.io"); // Socket.io setup for when we do the p
 const path = require("path");
 const hostname =  env.host;
 const io = new Server(server);
-const { tokenVerifierAdmin, tokenVerifierStudent }  = require('./utils'); // Utility js for putting function you may need
+const { tokenVerifier, verifyAdmin, verifyStudent }  = require('./utils'); // Utility js for putting function you may need
 
 const sess = {
     secret: env.secretKey,
@@ -40,10 +40,10 @@ app.set('view engine', 'pug');
 app.use(express.static(path.join(__dirname, 'public')));
 
 // Use routes
-app.use('/', loginRouter); // Using indexRouter in routes/login.js
+app.use('/',loginRouter); // Using indexRouter in routes/login.js
 app.use('/signup', signupRouter);
-app.use('/admin', tokenVerifierAdmin,adminRouter);
-app.use('/student', tokenVerifierStudent,studentRouter);
+app.use('/admin', [tokenVerifier, verifyAdmin], adminRouter);
+app.use('/student', [tokenVerifier, verifyStudent], studentRouter);
 
 // Socket.io code:
 // Empty
