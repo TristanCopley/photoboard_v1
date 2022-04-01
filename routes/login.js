@@ -1,17 +1,19 @@
 const express = require('express');
 const bcrypt = require('bcrypt');
+const env = require('../environment');
+const jwt = require('jsonwebtoken');
 let router = express.Router();
 let { users } = require('../mockDB.js'); // Where db should be
-const { loginWithCookie, onLogin} = require("../utils");
+const { tokenCreate, createLoginCookie, loginWithCookie } = require("../utils");
 
 /* Render Login page */
 router.get('/', async function(req, res) {
 
-  loginWithCookie(users, req, res).then(() => {}).catch(() => {
+  loginWithCookie(users, req, res).then(r => {}).catch(r => {
 
     res.render('login-signup/login', { title: 'Log in to Photoboard'});
 
-  });
+  })
 
 });
 
@@ -38,7 +40,22 @@ router.post('/', async function(req, res) {
 
     if(await bcrypt.compare(req.body.password, user.password)) {
 
-      onLogin(user, req, res);
+      req.session.user = user;
+
+      // Sets session token on login
+      tokenCreate(req);
+
+      createLoginCookie(user, req, res);
+
+      if ( user.classes[0] === 'admin') {
+
+        return res.redirect('/admin/classes/') // Send to admin page
+
+      } else {
+
+        return res.redirect('/student/') // Send to student page
+
+      }
 
     }
 
