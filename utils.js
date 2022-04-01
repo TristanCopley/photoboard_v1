@@ -1,13 +1,11 @@
 const jwt = require('jsonwebtoken');
 const env = require('./environment');
-const Cryptr = require('cryptr');
-const bcrypt = require("bcrypt");
 
 function tokenCreate(req) {
 
     req.session.token = jwt.sign({
         authorized: 'true'
-    }, env.secretKey, { expiresIn: 900 }); // Expires in 15 minutes
+    }, env.secretKey, { expiresIn: 1 }); // Expires in 15 minutes
 
 }
 
@@ -22,9 +20,23 @@ function tokenVerifier(req, res, next) {
 
         return next();
 
-    } catch {
+    } catch(e) {
 
-        return res.render('expired');
+        if (e.name === 'TokenExpiredError') {
+
+            return res.render('expired');
+
+        } else {
+
+            return res.render('login-signup/login', {
+
+                title: 'Log in to Photoboard',
+                login_error: 'Invalid credentials.'
+
+            });
+
+        }
+
 
     }
 
@@ -39,11 +51,12 @@ function verifyAdmin(req, res, next) {
             return res.render('login-signup/login', {
 
                 title: 'Log in to Photoboard',
-                login_error: 'You are not allowed to access that page.'
+                login_error: 'Invalid credentials.'
 
             });
 
         }
+
         next();
 
     } catch {
@@ -63,7 +76,7 @@ function verifyStudent(req, res, next) {
             return res.render('login-signup/login', {
 
                 title: 'Log in to Photoboard',
-                login_error: 'You are not allowed to access that page.'
+                login_error: 'Invalid credentials.'
 
             });
 

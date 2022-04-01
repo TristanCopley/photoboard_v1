@@ -3,8 +3,6 @@ let router = express.Router();
 
 router.get('/classes/', function(req, res) {
 
-    console.log(req.session.user);
-
     res.render('admin/classes', { title: 'Classes' });
 
 });
