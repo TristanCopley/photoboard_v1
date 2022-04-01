@@ -1,7 +1,7 @@
 let express = require('express');
 const bcrypt = require("bcrypt");
 let router = express.Router();
-let { users } = require('../mockDB.js'); // Where db should be
+let users = require('../mockDB.js'); // Where db should be
 
 /* GET users listing. */
 router.get('/', function(req, res) {
@@ -105,9 +105,11 @@ router.post('/', async (req, res) => {
       password: hashedPassword,
       firstName: req.body.firstName,
       lastName: req.body.lastName,
-      classes: [req.body.classCode]
+      classes: req.body.classCode
 
     };
+
+    console.log(user) // Used for testing purposes
 
     users.push(user)
 
