@@ -3,22 +3,15 @@ let router = express.Router();
 
 router.get('/classes/', function(req, res) {
 
-    res.render('admin/classes', {
+    console.log(req.session.user);
 
-        title: 'Classes',
-        classes: req.session.user.classes
-
-    });
+    res.render('admin/classes', { title: 'Classes' });
 
 });
 
 router.get('/', function(req, res) {
 
-    res.render('admin/channel', {
-
-        title: 'Admin view'
-
-    });
+    res.render('admin/channel', { title: 'Admin view' });
 
 });
 
