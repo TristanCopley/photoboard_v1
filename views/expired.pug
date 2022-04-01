@@ -3,12 +3,28 @@ html
     head
       title= title
 
+    //- Test markup for helper
+    //- How to make image accessible for crawlers and use 'background-size: cover' using one html `img` tag
+    mixin img-bg(src, alt)
+     img.img-bg(
+       src=src,
+       style=`background-image: url('${src}')`,
+       alt=alt
+      )&attributes(attributes)
+
+    figure
+      +img-bg("https://img.freepik.com/free-vector/404-error-page-found-glitch-effect-style-with-distorted-horizontal-glitched-lines-neon-glowing-typography-dark-background-website-maintenance-lost-internet-connection_8071-2628.jpg?w=2000",
+        "image"
+      )(class="additional-class")
+
+      figcaption
+
       //-
         Required for uniform sizing on all devices
       meta(charset="UTF-8" name="viewport" content="width=device-width initial-scale=1.0 maximum-scale=1.0 user-scalable=0")
 
     body
-      p You were inactive.
+
 
 //-
     So far this page is not implemented
