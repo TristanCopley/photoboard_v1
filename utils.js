@@ -5,7 +5,7 @@ function tokenCreate(req) {
 
     req.session.token = jwt.sign({
         authorized: 'true'
-    }, env.secretKey, { expiresIn: 1 }); // Expires in 15 minutes
+    }, env.secretKey, { expiresIn: 9000 }); // Expires in 15 minutes
 
 }
 

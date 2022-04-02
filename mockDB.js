@@ -29,8 +29,16 @@ module.exports.users = [
 module.exports.classes = [
 
     {
-        image: 'IMAGE_DATA_HERE',
+        card: {
+
+            image: 'https://imgs.search.brave.com/P8NCyzZ1R8yUEnMUUaSLtu3I9K8uuH_hzpke9WgxjL0/rs:fit:800:533:1/g:ce/aHR0cHM6Ly92aWdu/ZXR0ZS53aWtpYS5u/b2Nvb2tpZS5uZXQv/ZmlnZ2xlaG9ybi9p/bWFnZXMvMS8xNS9G/cmVkMl8xOWhyLTEt/LmpwZy9yZXZpc2lv/bi9sYXRlc3Q_Y2I9/MjAxMTEwMTUwMTM1/Mzg',
+            title: '17',
+            text: 'Photography 5 with Mr. Devlin'
+
+        },
+
         code: '12345',
+
         students: [
 
             'student@photoboard.com',
