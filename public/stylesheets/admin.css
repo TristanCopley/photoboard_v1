@@ -1,5 +1,9 @@
 @import "main.css"; /* Imports main.css which is required for all pages */
 
+a {
+    text-decoration: none;
+}
+
 .channel-wrapper {
 
     display: grid;
@@ -21,6 +25,7 @@
     animation: fadeIn cubic-bezier(0.645, -0.160, 0.335, 1) 1s forwards;
     opacity:0;
 
+
 }
 
 .class-card {
@@ -41,7 +46,7 @@
 
 }
 
-.class-card-title {
+.class-card-period {
 
     height: 1rem;
     color: var(--primary-color-2);
@@ -53,7 +58,7 @@
 
 }
 
-.class-card-text {
+.class-card-summary {
 
     text-align: center;
     color: var(--primary-color-1);
@@ -71,8 +76,10 @@
 
     background-color: pink;
     width: 12rem;
+    height: 12rem;
     border-top-left-radius: 1rem;
     border-top-right-radius: 1rem;
+    object-fit: cover;
 
 }
 

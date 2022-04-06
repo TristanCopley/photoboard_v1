@@ -13,7 +13,7 @@ router.get('/', async function(req, res) {
 
     res.render('login-signup/login', { title: 'Log in to Photoboard'});
 
-  })
+  });
 
 });
 
@@ -57,9 +57,7 @@ router.post('/', async function(req, res) {
 
       }
 
-    }
-
-    else {
+    } else {
 
       return res.render('login-signup/login', {
 
@@ -86,7 +84,6 @@ router.post('/', async function(req, res) {
     });
 
   }
-
 
 })
 

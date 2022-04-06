@@ -76,7 +76,6 @@ server.on('error', (error) => {
 
     }
 
-
 });
 
 // 404 page

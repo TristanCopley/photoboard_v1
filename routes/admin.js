@@ -1,15 +1,26 @@
 let express = require('express');
 let router = express.Router();
+let { classes } = require('../mockDB.js'); // Where db should be
 
-router.get('/classes/', function(req, res) {
+router.get('/classes', function(req, res) {
 
-    res.render('admin/classes', { title: 'Classes' });
+    const Class = req.session.user
+
+    res.render('admin/classes', {
+
+        title: 'Classes'
+        classes: classes
+
+    });
 
 });
 
-router.get('/', function(req, res) {
+router.get('/class/:class', function(req, res) {
 
-    res.render('admin/channel', { title: 'Admin view' });
+    res.render('admin/channel', {
+        title: 'Temporary'
+
+    });
 
 });
 
