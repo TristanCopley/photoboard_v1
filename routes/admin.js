@@ -4,12 +4,12 @@ let { classes } = require('../mockDB.js'); // Where db should be
 
 router.get('/classes', function(req, res) {
 
-    const Class = req.session.user
+    const Class = req.session.user;
 
     res.render('admin/classes', {
 
-        title: 'Classes'
-        classes: classes
+        title: 'Classes',
+     /*   classes: classes*/
 
     });
 

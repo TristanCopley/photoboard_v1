@@ -123,7 +123,7 @@ async function loginWithCookie(users, req, res) {
 
         createLoginCookie(user, req, res);
 
-        if ( user.classes[0] === 'admin') {
+        if ( user.classes[0] === 'admin' ) {
 
             return res.redirect('/admin/classes/') // Send to admin page
 
