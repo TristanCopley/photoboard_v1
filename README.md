@@ -1,5 +1,3 @@
-{% include nav.html %}
-
 
 # Photoboard: The best way to share your experiences!
 
