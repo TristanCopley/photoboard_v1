@@ -2,14 +2,14 @@ let express = require('express');
 let router = express.Router();
 let { classes } = require('../mockDB.js'); // Where db should be
 
-router.get('/classes', function(req, res) {
+router.get('/classes', async function(req, res) {
 
     const Class = req.session.user;
 
     res.render('admin/classes', {
 
         title: 'Classes',
-     /*   classes: classes*/
+        classes: classes
 
     });
 

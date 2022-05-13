@@ -2,11 +2,11 @@ extends layout
 
 block content
         div(class='classes-container')
-            each Class in classes
+            each Class in [[1, 'Mr. Devlin Photography 2'], [2, 'Mr. Devlin Photography 3'], [3, 'Mr. Devlin Photography 1'], [4, 'CODE CODE CODE class'], [5, 'Valen\'s Yoga class']]
                 a(href='/admin/class/' + Class.code)
                     div(class='class-card')
                         img(class='class-card-image' src='https://imgs.search.brave.com/JdpcB3qT5-0pM2N9R1BVmkK3MlSFMoq5wlre9sOA_cM/rs:fit:844:225:1/g:ce/aHR0cHM6Ly90c2U0/Lm1tLmJpbmcubmV0/L3RoP2lkPU9JUC5T/dUY4Tnl0VFM0VGsw/UXdsaHB1U0JBSGFF/SyZwaWQ9QXBp' alt='Class thumbnail')
                         div(class='class-card-period')
-                            p= 'Period ' + Class.period + ':'
+                            p= 'Period ' + Class[0] + ':'
                         div(class='class-card-summary')
-                            p Mr. Devlin Photography Class 2
+                            p= Class[1]

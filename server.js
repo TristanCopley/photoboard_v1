@@ -12,6 +12,9 @@ const path = require("path");
 const hostname =  env.host;
 const io = new Server(server);
 const { tokenVerifier, verifyAdmin, verifyStudent }  = require('./utils'); // Utility js for putting function you may need
+const initializeMongoDB = require('./initdb');
+
+initializeMongoDB();
 
 const sess = {
     secret: env.secretKey,
