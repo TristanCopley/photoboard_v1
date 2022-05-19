@@ -17,7 +17,7 @@ const initializeMongoDB = require('./initdb');
 initializeMongoDB();
 
 const sess = {
-    secret: env.secretKey,
+    secret: env.privateKey,
     cookie: {},
     resave: false,
     saveUninitialized: true,
@@ -34,6 +34,8 @@ let loginRouter = require('./routes/login'); // Also index router
 let signupRouter = require('./routes/signup');
 let adminRouter = require('./routes/admin');
 let studentRouter = require('./routes/student');
+let errorRouter = require('./routes/error');
+let expiredRouter = require('./routes/expired');
 
 // View engine setup, required for pug and rendering files
 app.set('views', path.join(__dirname, 'views'));
@@ -47,7 +49,8 @@ app.use('/',loginRouter); // Using indexRouter in routes/login.js
 app.use('/signup', signupRouter);
 app.use('/admin', [tokenVerifier, verifyAdmin], adminRouter);
 app.use('/student', [tokenVerifier, verifyStudent], studentRouter);
-
+app.use('/error', errorRouter)
+app.use('/expired', expiredRouter)
 // Socket.io code:
 // Empty
 
