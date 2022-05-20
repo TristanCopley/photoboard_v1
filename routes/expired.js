@@ -3,7 +3,7 @@ let router = express.Router();
 
 router.get('/', function(req, res) {
 
-    res.render('expired/expired', { title: 'expired' });
+    res.render('error/expired', { title: 'expired' });
 
 });
 
