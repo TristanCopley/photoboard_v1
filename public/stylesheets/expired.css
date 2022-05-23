@@ -22,7 +22,6 @@ body, html {
     margin: 0;
     height: 100%; /* For some reason this is required for background */
     overflow-x: hidden; /* Remove horizontal scrollbar that can appear if the conditions are right*/
-
 }
 
 body {
@@ -55,7 +54,7 @@ body {
     width: 100vw;
     height: 100%;
     display: flex;
-    justify-content: start;
+    justify-content: center;
 
 }
 
@@ -70,7 +69,6 @@ body {
     text-align: center;
     border-radius: 1rem;
     background: white;
-
 }
 
 
