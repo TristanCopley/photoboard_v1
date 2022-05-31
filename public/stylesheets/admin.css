@@ -1,11 +1,5 @@
 @import "main.css"; /* Imports main.css which is required for all pages */
 
-body, html {
-
-    padding: 1rem;
-
-}
-
 a {
     text-decoration: none;
 }

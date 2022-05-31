@@ -36,6 +36,30 @@ router.post('/', async (req, res) => {
 
     });
 
+    if (req.body.classCode !== 'admin' && !fs.existsSync(`./classrooms/${req.body.classCode}.txt`)) {
+
+        return res.render('login-signup/signup', {
+
+            title: 'Join Photoboard',
+            signup_error: 'Class does not exist.',
+
+            populateFirstName: req.body.firstName,
+            populateLastName: req.body.lastName,
+            populateEmail: req.body.email,
+            populatePassword: req.body.password,
+            populateConfirmPassword: req.body.confirmPassword,
+            populateClassCode: req.body.classCode,
+            firstNameColor: firstNameColor,
+            lastNameColor: lastNameColor,
+            emailColor: emailColor,
+            passwordColor: passwordColor,
+            confirmPasswordColor: confirmPasswordColor,
+            classCodeColor: 'red'
+
+        });
+
+    }
+
     if (fs.existsSync(`./users/${req.body.email}.txt`)) {
 
         return res.render('login-signup/signup', {
@@ -179,7 +203,7 @@ router.post('/createClass', async (req, res) => {
 
                 }
 
-                user.classes.push(classCodeGen)
+                user.classes.push(classCodeGen);
 
                 fs.writeFile(`./users/${user.email}.txt`, JSON.stringify(user), function(err, data){});
 
