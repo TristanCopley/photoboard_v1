@@ -29,8 +29,6 @@ const isStudent = function (req, res, next) {
         let login = req.signedCookies['login'];
         let payload = jwt.verify(login, process.env.JWT_SECRET);
 
-        console.log(payload)
-
         if (payload.auth === 'false') {
 
             next();

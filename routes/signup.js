@@ -110,7 +110,7 @@ router.post('/', async (req, res) => {
 
         if (req.body.classCode === 'admin') return res.render('login-signup/createClass', { title: 'Create class'});
 
-        return res.render('login-signup/login', { title: 'Log in to Photoboard'});
+        return res.redirect('/');
 
     } catch(e) {
         consoleMessage('Failed to create user data', 'red');
