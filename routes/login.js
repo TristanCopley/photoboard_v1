@@ -7,14 +7,16 @@ let router = express.Router();
 /* Render Login page */
 router.get('/', async (req, res) => {
 
+    let Classes = [];
+
     try {
 
         let login = req.signedCookies['login'];
         let payload = jwt.verify(login, process.env.JWT_SECRET);
 
-        let Classes = [];
-
         fs.readFile(`./users/${payload.email}.txt`, 'utf8', async function(err, data){
+
+            if(data === undefined) return res.render('login-signup/login', { title: 'Log in to Photoboard'});
 
             let user = JSON.parse(data);
 
@@ -35,7 +37,7 @@ router.get('/', async (req, res) => {
 
                     let ClassData = JSON.parse(data);
 
-                    Classes.push({name: ClassData.name, period: ClassData.period, classCode: Class})
+                    Classes.push({name: ClassData.name, period: ClassData.period, classCode: Class});
 
                     x++;
 
@@ -112,7 +114,7 @@ router.post('/', async (req, res) => {
 
                         if(auth === 'true') {
 
-                            return res.render('admin/classes', {title: 'Class Dashboard'});
+                            return res.render('admin/classes', {title: 'Class Dashboard', Classes: Classes});
 
                         } else {
 

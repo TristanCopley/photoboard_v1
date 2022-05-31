@@ -1,5 +1,12 @@
 extends layout
 
 block content
-    div(class='channel-wrapper')
-        div(class='channel')
+    div(class='gridContainer')
+        - var n = 0;
+        while n < 81
+            - n++
+            div(class='item')
+        div(class='item-notif')
+            p Hello
+        div(class='item-thread')
+            p Hello

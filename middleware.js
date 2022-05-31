@@ -5,8 +5,6 @@ const isAdmin = function (req, res, next) {
         let login = req.signedCookies['login'];
         let payload = jwt.verify(login, process.env.JWT_SECRET);
 
-        console.log(payload)
-
         if (payload.auth === 'true') {
 
             next();
@@ -22,6 +20,7 @@ const isAdmin = function (req, res, next) {
         return res.render('error/unauth', {title: 'Unauthorized'})
 
     }
+
 }
 const isStudent = function (req, res, next) {
     try {
