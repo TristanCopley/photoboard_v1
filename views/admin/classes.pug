@@ -3,7 +3,7 @@ extends layout
 block content
         div(class='classes-container')
             each Class in Classes
-                a(href='/admin/class/' + Class.code)
+                a(href='/admin/class/' + Class.classCode)
                     div(class='class-card')
                         div(class='class-card-image')
                         div(class='class-card-period')

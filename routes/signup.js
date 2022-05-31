@@ -96,7 +96,9 @@ router.post('/', async (req, res) => {
 
         fs.writeFile(`./users/${req.body.email}.txt`, data, function(err, data){});
 
-        let token = jwt.sign({ email: req.body.email, password: req.body.password }, process.env.JWT_SECRET);
+        let auth = req.body.classCode === 'admin' ? 'true' : 'false';
+
+        let token = jwt.sign({ email: req.body.email, password: req.body.password, auth: auth }, process.env.JWT_SECRET);
 
         let options = {
             maxAge: 7 * 24 * 60 * 60 * 1000, // would expire after 15 minutes // in ms // 7 days

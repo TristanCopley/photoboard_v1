@@ -19,17 +19,26 @@ app.use(cookieParser(process.env.COOKIE_SECRET));
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
 
+// Routes
 let loginRouter = require('./routes/login');
 let signupRouter = require('./routes/signup');
 let errorRouter = require('./routes/error');
+let adminRouter = require('./routes/admin');
+let studentRouter = require('./routes/student');
+
+// Middleware
+const {isAdmin} = require("./middleware");
+const {isStudent} = require("./middleware");
 
 // Serve public files
 app.use(express.static(path.join(__dirname, 'public')));
 
 // Routes
 app.use('/',loginRouter);
-app.use('/signup',signupRouter);
-app.use('/error', errorRouter)
+app.use('/signup', signupRouter);
+app.use('/error', errorRouter);
+app.use('/admin', isAdmin,adminRouter);
+app.use('/student', isStudent,studentRouter);
 
 // Server start
 app.listen(port, () => {

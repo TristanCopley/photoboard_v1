@@ -1,7 +1,4 @@
-const fs = require("fs");
-
 const isASCII=(str)=>/^[\x00-\x7F]*$/.test(str);
-
 function consoleMessage(message, color) {
 
     switch(color) {
@@ -30,13 +27,5 @@ function consoleMessage(message, color) {
     }
 
 }
-/*
-
-classroom.title = options.title;
-classroom.period = options.period;
-classroom.thumbnail = options.thumbnail;
-
-*/
-
 
 module.exports = {isASCII,consoleMessage}
