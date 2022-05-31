@@ -1,0 +1,20 @@
+extends layout
+
+block content
+    div(class='login-wrapper')
+        div(class='login-container')
+            form(method="post" action="/signup/createClass")
+                h1(class='login-title') Create your first class
+
+                div(class='form-row')
+                    input(class='form-input' type='text' id='signup-input-className' placeholder=' ' onpaste="return false" name='className' value= populateClassName style='border-bottom-color: ' + classNameColor)
+                    label(class='form-label' for='signup-input-className') Class name
+
+                div(class='form-row')
+                    input(class='form-input' type='text' id='signup-input-period'  placeholder=' ' onpaste="return false" name='period' value= populatePeriod style='border-bottom-color: ' + periodColor)
+                    label(class='form-label' for='signup-input-period') Period
+
+                div(class='login-error-container' id='signup_error')
+                    p(class='login-error-text')= signup_error
+
+                button(class='submit-btn' type='submit') Create

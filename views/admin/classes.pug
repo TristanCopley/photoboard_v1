@@ -1,0 +1,12 @@
+extends layout
+
+block content
+        div(class='classes-container')
+            each Class in Classes
+                a(href='/admin/class/' + Class.code)
+                    div(class='class-card')
+                        div(class='class-card-image')
+                        div(class='class-card-period')
+                            p= 'Period ' + Class.period + ':'
+                        div(class='class-card-summary')
+                            p= Class.name

@@ -1,0 +1,79 @@
+/* colors*/
+:root {
+
+    --bg-color-1: #19c7d9;
+    --bg-color-2: #0ed8ee;
+    --primary-color-1: #19c7d9;
+    --primary-color-2: #0ed8ee;
+    --secondary-color-1: #8bf1ff;
+    --secondary-color-2: #c1f8ff;
+    --scrollbar-background: cyan;
+
+}
+
+/* font and size */
+* {
+
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+
+}
+
+body, html {
+
+    padding: 0;
+    margin: 0;
+    height: 100%; /* For some reason this is required for background */
+    overflow-x: hidden; /* Remove horizontal scrollbar that can appear if the conditions are right*/
+
+}
+
+body {
+
+    background: repeating-linear-gradient(
+
+            45deg,
+            var(--bg-color-1),
+            var(--bg-color-1) 10px,
+            var(--bg-color-2) 10px,
+            var(--bg-color-2) 20px
+
+    );
+
+    position: absolute;
+    background-size: calc(100% + 425px) 100%; /* Calc is used for 100% of view size + pixels moved so there is no seam */
+    animation: scroll-background 20s linear infinite; /* s is how fast it moves*/
+
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+    position: absolute;
+}
+
+/* Track */
+::-webkit-scrollbar{
+    background: transparent;
+    width: 0.6rem;
+}
+::-webkit-scrollbar-track {
+    display:none;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background-color: darkblue;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background-color: var(--secondary-color-1);
+}
+
+@keyframes scroll-background {
+
+    0%{background-position: -425px 0}
+    100%{background-position: 0 0}
+
+} /* 85px are the correct spacing for lines */

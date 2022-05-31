@@ -1,0 +1,39 @@
+extends layout
+
+block content
+    div(class='login-wrapper')
+        div(class='login-container')
+            form(method="post" action="/signup/")
+                h1(class='login-title') Sign up for Photoboard
+
+                div(class='form-row')
+                    input(class='form-input' type='text' id='signup-input-firstName' placeholder=' ' onpaste="return false" name='firstName' value= populateFirstName style='border-bottom-color: ' + firstNameColor)
+                    label(class='form-label' for='signup-input-firstName') First name
+
+                div(class='form-row')
+                    input(class='form-input' type='text' id='signup-input-lastName'  placeholder=' ' onpaste="return false" name='lastName' value= populateLastName style='border-bottom-color: ' + lastNameColor)
+                    label(class='form-label' for='signup-input-lastName') Last name
+
+                div(class='form-row')
+                    input(class='form-input' type='email' id='signup-input-email' placeholder=' ' onpaste="return false" name='email' value= populateEmail style='border-bottom-color: ' + emailColor)
+                    label(class='form-label' for='signup-input-email') Personal email
+
+                div(class='form-row')
+                    input(class='form-input' type='password' id='signup-input-password' placeholder=' ' onpaste="return false" name='password' value= populatePassword style='border-bottom-color: ' + passwordColor)
+                    label(class='form-label' for='signup-input-password') Password
+
+                div(class='form-row')
+                    input(class='form-input' type='password' id='signup-input-confirm-password' placeholder=' ' onpaste="return false" name='confirmPassword' value= populateConfirmPassword style='border-bottom-color: ' + confirmPasswordColor)
+                    label(class='form-label' for='signup-input-confirm-password') Confirm password
+
+                div(class='form-row')
+                    input(class='form-input' type='text' id='signup-input-class-code' placeholder=' ' onpaste="return false" name='classCode' value= populateClassCode style='border-bottom-color: ' + classCodeColor)
+                    label(class='form-label' for='signup-input-class-code') Class code
+
+                div(class='login-error-container' id='signup_error')
+                    p(class='login-error-text')= signup_error
+
+                button(class='submit-btn' type='submit') Join
+
+                p(class='signup-text') Already have an account?
+                    a(href='/' rel="prefetch" )  Log in.

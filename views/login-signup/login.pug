@@ -1,0 +1,23 @@
+extends layout
+
+block content
+    div(class='login-wrapper')
+        div(class='login-container')
+            form(method="post" action="/")
+                h1(class='login-title') Log in to Photoboard
+
+                div(class='login-error-container' id='login_error')
+                    p(class='login-error-text' name='loginErrorText')= login_error
+
+                div(class='form-row')
+                    input(class='form-input' type='text' id='login-input-email' placeholder=' ' name='email' value= populateEmail style='border-bottom-color: ' + emailColor)
+                    label(class='form-label' for='login-input-email') Email
+
+                div(class='form-row')
+                    input(class='form-input' type='password' id='login-input-password' placeholder=' ' name='password' value= populatePassword style='border-bottom-color: ' + passwordColor)
+                    label(class='form-label' for='login-input-password') Password
+
+                button(class='submit-btn' type='submit') Login
+
+                p(class='signup-text') Don't have an account?
+                    a(href='/signup/' rel="prefetch")  Sign Up.
