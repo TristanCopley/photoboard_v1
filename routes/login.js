@@ -24,7 +24,15 @@ router.get('/', async (req, res) => {
 
             }
 
-            res.redirect('/admin/classes/');
+            if (payload.auth === 'true') {
+
+                res.redirect('/admin/classes/');
+
+            } else {
+
+                res.redirect('/student/class/' + user.classes[0]);
+
+            }
 
         });
 
