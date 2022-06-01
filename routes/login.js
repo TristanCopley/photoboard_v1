@@ -7,8 +7,6 @@ let router = express.Router();
 /* Render Login page */
 router.get('/', async (req, res) => {
 
-    let Classes = [];
-
     try {
 
         let login = req.signedCookies['login'];
@@ -22,43 +20,12 @@ router.get('/', async (req, res) => {
 
             if(user.password !== payload.password) {
 
-                return badLogin(req, res)
+                return res.render('error/unauth');
 
             }
 
-            let usrlen = user.classes.length;
-            let x = 0;
+            res.redirect('/admin/classes/');
 
-            for (let Class of user.classes) {
-
-                if (Class === 'admin') {x++;continue;}
-
-                fs.readFile(`./classrooms/${Class}.txt`, 'utf8', function (err, data) {
-
-                    if(data === undefined) return res.render('login-signup/login', { title: 'Log in to Photoboard'});
-
-                    let ClassData = JSON.parse(data);
-
-                    Classes.push({name: ClassData.name, period: ClassData.period, classCode: Class, bannerColor: ClassData.bannerColor});
-
-                    x++;
-
-                    if(x === usrlen) {
-
-                        if(payload.auth === 'true') {
-
-                            return res.render('admin/classes', {title: 'Class Dashboard', Classes: Classes});
-
-                        } else {
-
-                            return res.redirect('/student/class/' + Class)
-
-                        }
-
-                    }
-
-                })
-            }
         });
 
     }

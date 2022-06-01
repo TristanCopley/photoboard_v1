@@ -1,12 +1,16 @@
 extends layout
 
 block content
-        div(class='classes-container')
-            each Class in Classes
-                a(href='/admin/class/' + Class.classCode)
-                    div(class='class-card')
-                        div(class='class-card-image' style='background-color:'+Class.bannerColor+'')
-                        div(class='class-card-period')
-                            p= 'Period ' + Class.period + ':'
-                        div(class='class-card-summary')
-                            p= Class.name
+    div(class='addClassIcon')
+        a(href='/admin/create')
+            span(class='link')
+        img(class='addClassIconIMG' src='/assets/add.svg')
+    div(class='classes-container')
+        each Class in Classes
+            a(href='/admin/class/' + Class.classCode)
+                div(class='class-card')
+                    div(class='class-card-image' style='background-color:'+Class.bannerColor+'')
+                    div(class='class-card-period')
+                        p= 'Period ' + Class.period + ':'
+                    div(class='class-card-summary')
+                        p= Class.name

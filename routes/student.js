@@ -29,7 +29,7 @@ router.post('/class/:classCode/comment/:messageid', async (req, res) => {
         let login = req.signedCookies['login'];
         let payload = jwt.verify(login, process.env.JWT_SECRET);
 
-        if(req.body.comment !== '' && req.body.comment !== undefined) {
+        if(req.body.comment !== '' && req.body.comment !== undefined && req.body.comment.length < 1000) {
 
             fs.readFile(`./classrooms/${req.params.classCode}.txt`, 'utf8', function (err, data) {
 
@@ -65,6 +65,10 @@ router.post('/class/:classCode/comment/:messageid', async (req, res) => {
                 });
 
             });
+
+        } else {
+
+            return res.redirect('/student/class/' + req.params.classCode);
 
         }
 

@@ -1,6 +1,7 @@
 const express = require('express');
 const fs = require("fs");
 const jwt = require("jsonwebtoken");
+const {consoleMessage} = require("../util-dir/utils");
 let router = express.Router();
 
 router.get('/class/:classCode', async (req, res) => {
@@ -22,6 +23,76 @@ router.get('/class/:classCode', async (req, res) => {
 
 });
 
+router.get('/classes', async (req, res) => {
+
+    let Classes = [];
+
+    try {
+
+        let login = req.signedCookies['login'];
+        let payload = jwt.verify(login, process.env.JWT_SECRET);
+
+        fs.readFile(`./users/${payload.email}.txt`, 'utf8', async function(err, data){
+
+            if(data === undefined) return res.render('login-signup/login', { title: 'Log in to Photoboard'});
+
+            let user = JSON.parse(data);
+
+            if(user.password !== payload.password) {
+
+                return res.render('error/unauth');
+
+            }
+
+            let usrlen = user.classes.length;
+            let x = 0;
+
+            for (let Class of user.classes) {
+
+                if (Class === 'admin') {x++;continue;}
+
+                fs.readFile(`./classrooms/${Class}.txt`, 'utf8', function (err, data) {
+
+                    if(data === undefined) return res.render('login-signup/login', { title: 'Log in to Photoboard'});
+
+                    let ClassData = JSON.parse(data);
+
+                    Classes.push({name: ClassData.name, period: ClassData.period, classCode: Class, bannerColor: ClassData.bannerColor});
+
+                    x++;
+
+                    if(x === usrlen) {
+
+                        if(payload.auth === 'true') {
+
+                            return res.render('admin/classes', {title: 'Class Dashboard', Classes: Classes});
+
+                        } else {
+
+                            return res.redirect('/student/class/' + Class)
+
+                        }
+
+                    }
+
+                })
+            }
+        });
+
+    }
+    catch (error) {
+        consoleMessage('Failed to log in with cookie', 'red');
+        res.render('login-signup/login', { title: 'Log in to Photoboard'});
+    }
+
+});
+
+router.get('/create', (req, res) => {
+
+    res.render('login-signup/createClass', { title: 'Create class'});
+
+});
+
 router.post('/class/:classCode/announce', async (req, res) => {
 
     try {
@@ -29,7 +100,7 @@ router.post('/class/:classCode/announce', async (req, res) => {
         let login = req.signedCookies['login'];
         let payload = jwt.verify(login, process.env.JWT_SECRET);
 
-        if(req.body.announcement !== '' && req.body.announcement !== undefined) {
+        if(req.body.announcementTitle !== '' && req.body.announcementTitle !== undefined && req.body.announcementContent !== '' && req.body.announcementContent !== undefined && req.body.announcementContent.length < 2750 && req.body.announcementTitle.length < 500) {
 
             fs.readFile(`./classrooms/${req.params.classCode}.txt`, 'utf8', function (err, data) {
 
@@ -49,15 +120,23 @@ router.post('/class/:classCode/announce', async (req, res) => {
 
                     }
 
+                    let msgType = 'announcement'
+
+                    if(req.body.assignmentSwitch) {
+
+                        msgType = 'assignment'
+
+                    }
+
                     ClassData.messages.unshift(
                         {
                             author: user.firstName + " " + user.lastName,
-                            title: 'Announcement!',
-                            content: req.body.announcement,
+                            title: req.body.announcementTitle,
+                            content: req.body.announcementContent,
                             comments: [],
                             date: new Date(parseInt(Date.now())).toDateString(),
                             id:  Math.round(Date.now()) + 'x' + Math.round(Math.random() * 999),
-                            type: 'announcement'
+                            type: msgType
                         }
                     )
 
@@ -68,6 +147,10 @@ router.post('/class/:classCode/announce', async (req, res) => {
                 });
 
             });
+
+        } else {
+
+            return res.redirect('/admin/class/' + req.params.classCode);
 
         }
 
@@ -86,7 +169,7 @@ router.post('/class/:classCode/comment/:messageid', async (req, res) => {
         let login = req.signedCookies['login'];
         let payload = jwt.verify(login, process.env.JWT_SECRET);
 
-        if(req.body.comment !== '' && req.body.comment !== undefined) {
+        if(req.body.comment !== '' && req.body.comment !== undefined && req.body.comment.length < 1500) {
 
             fs.readFile(`./classrooms/${req.params.classCode}.txt`, 'utf8', function (err, data) {
 
@@ -122,6 +205,10 @@ router.post('/class/:classCode/comment/:messageid', async (req, res) => {
                 });
 
             });
+
+        } else {
+
+            return res.redirect('/admin/class/' + req.params.classCode)
 
         }
 

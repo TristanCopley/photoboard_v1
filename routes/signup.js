@@ -124,6 +124,7 @@ router.post('/createClass', async (req, res) => {
     let invalidFormError = '';
     let classNameColor = 'lightgrey';
     let periodColor = 'lightgrey';
+    let classDescColor = 'lightgrey';
 
     if(req.body.period.length !== 1) {
 
@@ -154,6 +155,7 @@ router.post('/createClass', async (req, res) => {
         signup_error: invalidFormError,
         populateClassName: req.body.className,
         populatePeriod: req.body.period,
+        populateClassDesc: req.body.classDesc,
         classNameColor: classNameColor,
         periodColor: periodColor
 
@@ -175,14 +177,9 @@ router.post('/createClass', async (req, res) => {
 
                 name: req.body.className,
                 period: req.body.period,
+                classDesc: req.body.classDesc,
                 bannerColor: bannerColor,
-                enrollmentList: [{
-
-                    firstName: 'Tristan',
-                    lastName: 'Copley',
-                    email: 'admin@photoboard.com'
-
-                }],
+                enrollmentList: [],
                 messages: [],
 
             }
@@ -204,9 +201,9 @@ router.post('/createClass', async (req, res) => {
 
                 fs.writeFile(`./users/${user.email}.txt`, JSON.stringify(user), function(err, data){});
 
-            });
+                return res.redirect('/')
 
-            return res.render('login-signup/login', { title: 'Log in to Photoboard'});
+            });
 
         });
     } catch(e) {

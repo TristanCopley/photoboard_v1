@@ -21,26 +21,43 @@ block content
                 strong= ' ' + Class
         div(class='item-banner-top')
             h1(class='name')= ClassData.name
-            p(class='subtext')= 'Period ' + ClassData.period
+            h2(class='subtext')= 'Period ' + ClassData.period
+            pContent= ClassData.classDesc
         div(class='announce')
             p Announce something to your class
             form(class='announce-form' method="post" action='/admin/class/'+Class+'/announce')
-                textarea(class='announcement-input' type='text' id='announcementTextbox' placeholder='Write something!' name='announcement' value= announcement)
+                textarea(class='announcement-input-title' type='text' id='announcementTitleTextbox' placeholder='Write something!' name='announcementTitle' value= announcementTitle)
+                textarea(class='announcement-input-content' type='text' id='announcementContentTextbox' placeholder='Write something!' name='announcementContent' value= announcementContent)
                 p
                     strong TO: ALL STUDENTS
+                    label(class='switch assignmentSelectSwitch')
+                        input(type='checkbox' name='assignmentSwitch')
+                        span(class='slider')
                     input(type='submit' value='Post' class='announcement-btn')
+                    br
+                    strong(class='assignmentSelectText') Make this an assignment:
         - var m = 5;
         for Message in ClassData.messages
             div(class='message' style=`grid-row: ${m} / ${m + 3}; grid-column: 3 / 10;`)
-                h1(class='messageAuthor')= Message.author+":"
-                    p(class='messageDate')= Message.date
-                p(class='messageContent')= Message.content
-                if Message.comments.length > 0
-                    div(class='message-comments' style=`grid-row: ${m + 1} / ${m + 2}; grid-column: 3 / 10;`)
-                        h1 Comments:
-                        for Comments in Message.comments
-                            p(class='author')= `${Comments.author}: `
-                                pContent= Comments.content
+                div(class='messageIcon')
+                    if Message.type === 'announcement'
+                        img(class='messageIconIMG' src='/assets/text.svg')
+                    else
+                        img(class='messageIconIMG' src='/assets/assignment.svg')
+                div(class='messageMainContent' style=`grid-row: ${m} / ${m + 3}; grid-column: 3 / 10;`)
+                    p(class='messageDate')= 'Posted by ' + Message.author + ' on ' + Message.date
+                        h1(class='messageAuthor')= Message.title+":"
+                    p(class='messageContent')= Message.content
+                if Message.type === 'announcement'
+                    if Message.comments.length > 0
+                        div(class='message-comments' style=`grid-row: ${m + 1} / ${m + 2}; grid-column: 3 / 10;`)
+                            h1(class='message-comments-header') Comments:
+                            for Comments in Message.comments
+                                p(class='author')= `${Comments.author}: `
+                                    pContent= Comments.content
+                else
+                    input(type='file' name='assignmentImageUpload')
+                    <input type="file" name="myImage" accept="image/png, image/gif, image/jpeg" />
                 div(class='message-comment-input' style=`grid-row: ${m + 2} / ${m + 3}; grid-column: 3 / 10;`)
                     form(class='announce-form' method="post" action='/admin/class/'+Class+'/comment/' + Message.id)
                         textarea(class='comment-input' type='text' id='commentTextbox' placeholder='Write a comment!' name='comment' value= comment)

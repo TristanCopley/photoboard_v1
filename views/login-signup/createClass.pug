@@ -14,6 +14,10 @@ block content
                     input(class='form-input' type='text' id='signup-input-period'  placeholder=' ' onpaste="return false" name='period' value= populatePeriod style='border-bottom-color: ' + periodColor)
                     label(class='form-label' for='signup-input-period') Period
 
+                div(class='form-row')
+                    input(class='form-input' type='text' id='signup-input-classDesc'  placeholder=' ' onpaste="return false" name='classDesc' value= populateClassDesc style='border-bottom-color: lightgrey')
+                    label(class='form-label' for='signup-input-classDesc') Class description
+
                 div(class='login-error-container' id='signup_error')
                     p(class='login-error-text')= signup_error
 
