@@ -28,13 +28,11 @@ body, html {
 body {
 
     background: repeating-linear-gradient(
-
-            45deg,
-            var(--bg-color-1),
-            var(--bg-color-1) 10px,
-            var(--bg-color-2) 10px,
-            var(--bg-color-2) 20px
-
+        45deg,
+        var(--bg-color-1),
+        var(--bg-color-1) 10px,
+        var(--bg-color-2) 10px,
+        var(--bg-color-2) 20px
     );
 
     position: absolute;

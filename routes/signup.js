@@ -1,7 +1,8 @@
 const express = require('express');
-const {consoleMessage} = require("../utils");
+const {consoleMessage} = require("../util-dir/utils");
 const fs = require("fs");
 const jwt = require("jsonwebtoken");
+const {noise} = require("../util-dir/noise");
 let router = express.Router();
 
 
@@ -168,34 +169,28 @@ router.post('/createClass', async (req, res) => {
             let classCodeGen = (parseInt(data) % 33554431).toString(32).padStart(5, 'e').toUpperCase();
             fs.writeFile(`./ratchet.txt`, (parseInt(data)+1).toString(), function(err, data){});
 
+            let bannerColor = `rgb(${Math.random() * 105 + 150}\,${Math.random() * 105 + 150}\,${Math.random() * 105 + 150})`
+
             let classData = {
 
                 name: req.body.className,
                 period: req.body.period,
+                bannerColor: bannerColor,
                 enrollmentList: [{
 
                     firstName: 'Tristan',
-                    lastName: 'Tristan',
+                    lastName: 'Copley',
                     email: 'admin@photoboard.com'
 
                 }],
-                mainMessages: [
-                    {
-                        author: 'admin@photoboard.com',
-                        title: 'Welcome!',
-                        content: 'This is the first message to your classroom.',
-                        comments: [],
-                        date: Math.round(Date.now()),
-                        type: 'announcement'
-                    }
-                ],
+                messages: [],
 
             }
 
             fs.writeFile(`./classrooms/${classCodeGen}.txt`, JSON.stringify(classData), function(err, data){});
             fs.readFile(`./users/${payload.email}.txt`, 'utf8', function(err, data){
 
-                if (data === undefined) {return res.render('login-signup/login', { title: 'Log in to Photoboard'});}
+                if(data === undefined) return res.redirect('/')
 
                 let user = JSON.parse(data);
 

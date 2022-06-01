@@ -1,9 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Hammersmith+One&display=swap');
+
 /* colors*/
 :root {
 
     --bg-color-1: #19c7d9;
     --bg-color-2: #0ed8ee;
-    --primary-color-1: #19c7d9;
+    --primary-color-1: #84ced5;
     --primary-color-2: #0ed8ee;
     --secondary-color-1: #8bf1ff;
     --secondary-color-2: #c1f8ff;
@@ -14,7 +16,7 @@
 /* font and size */
 * {
 
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Hammersmith One', serif;
     font-size: 20px;
 
 }
@@ -31,13 +33,11 @@ body, html {
 body {
 
     background: repeating-linear-gradient(
-
-            45deg,
-            var(--bg-color-1),
-            var(--bg-color-1) 10px,
-            var(--bg-color-2) 10px,
-            var(--bg-color-2) 20px
-
+        45deg,
+        var(--bg-color-1),
+        var(--bg-color-1) 10px,
+        var(--bg-color-2) 10px,
+        var(--bg-color-2) 20px
     );
 
     position: absolute;

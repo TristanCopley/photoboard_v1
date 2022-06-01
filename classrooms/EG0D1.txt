@@ -1,1 +1,0 @@
-{"name":"Photography 1","period":"1","enrollmentList":[{"firstName":"Tristan","lastName":"Tristan","email":"admin@photoboard.com"}],"mainMessages":[{"author":"admin@photoboard.com","title":"Welcome!","content":"This is the first message to your classroom.","comments":[],"date":1653967366894,"type":"announcement"}]}

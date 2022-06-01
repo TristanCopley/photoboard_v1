@@ -5,7 +5,7 @@ block content
             each Class in Classes
                 a(href='/admin/class/' + Class.classCode)
                     div(class='class-card')
-                        div(class='class-card-image')
+                        div(class='class-card-image' style='background-color:'+Class.bannerColor+'')
                         div(class='class-card-period')
                             p= 'Period ' + Class.period + ':'
                         div(class='class-card-summary')

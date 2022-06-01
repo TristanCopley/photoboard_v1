@@ -1,5 +1,5 @@
 const express = require('express');
-const {consoleMessage} = require("../utils");
+const {consoleMessage} = require("../util-dir/utils");
 const fs = require("fs");
 const jwt = require('jsonwebtoken');
 let router = express.Router();
@@ -35,9 +35,11 @@ router.get('/', async (req, res) => {
 
                 fs.readFile(`./classrooms/${Class}.txt`, 'utf8', function (err, data) {
 
+                    if(data === undefined) return res.render('login-signup/login', { title: 'Log in to Photoboard'});
+
                     let ClassData = JSON.parse(data);
 
-                    Classes.push({name: ClassData.name, period: ClassData.period, classCode: Class});
+                    Classes.push({name: ClassData.name, period: ClassData.period, classCode: Class, bannerColor: ClassData.bannerColor});
 
                     x++;
 
@@ -106,7 +108,7 @@ router.post('/', async (req, res) => {
 
                     let ClassData = JSON.parse(data);
 
-                    Classes.push({name: ClassData.name, period: ClassData.period, classCode: Class})
+                    Classes.push({name: ClassData.name, period: ClassData.period, classCode: Class, bannerColor: ClassData.bannerColor})
 
                     x++;
 
@@ -147,5 +149,13 @@ function badLogin(req, res) {
     });
 
 }
+
+router.get('/logout', async (req, res) => {
+
+    res.clearCookie("login");
+    return res.redirect('/')
+
+
+});
 
 module.exports = router;
