@@ -111,7 +111,20 @@ router.post('/', async (req, res) => {
 
         if (req.body.classCode === 'admin') return res.render('login-signup/createClass', { title: 'Create class'});
 
-        return res.redirect('/');
+        fs.readFile(`./classrooms/${req.body.classCode}.txt`, 'utf8', function(err, data){
+
+            let ClassData = JSON.parse(data);
+
+            ClassData.enrollmentList.unshift({
+                firstName: req.body.firstName,
+                lastName: req.body.lastName
+            })
+
+            fs.writeFile(`./classrooms/${req.body.classCode}.txt`, JSON.stringify(ClassData), function(err, data){});
+
+            return res.redirect('/');
+
+        })
 
     } catch(e) {
         consoleMessage('Failed to create user data', 'red');
@@ -173,18 +186,6 @@ router.post('/createClass', async (req, res) => {
 
             let bannerColor = `rgb(${Math.random() * 105 + 150}\,${Math.random() * 105 + 150}\,${Math.random() * 105 + 150})`
 
-            let classData = {
-
-                name: req.body.className,
-                period: req.body.period,
-                classDesc: req.body.classDesc,
-                bannerColor: bannerColor,
-                enrollmentList: [],
-                messages: [],
-
-            }
-
-            fs.writeFile(`./classrooms/${classCodeGen}.txt`, JSON.stringify(classData), function(err, data){});
             fs.readFile(`./users/${payload.email}.txt`, 'utf8', function(err, data){
 
                 if(data === undefined) return res.redirect('/')
@@ -196,6 +197,24 @@ router.post('/createClass', async (req, res) => {
                     return res.render('login-signup/createClass', { title: 'Create class'})
 
                 }
+
+                let classData = {
+
+                    name: req.body.className,
+                    period: req.body.period,
+                    classDesc: req.body.classDesc,
+                    bannerColor: bannerColor,
+                    enrollmentList: [
+                        {
+                            firstName: user.firstName,
+                            lastName: user.lastName
+                        }
+                    ],
+                    messages: [],
+
+                }
+
+                fs.writeFile(`./classrooms/${classCodeGen}.txt`, JSON.stringify(classData), function(err, data){});
 
                 user.classes.push(classCodeGen);
 

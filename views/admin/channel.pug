@@ -12,6 +12,11 @@ block content
             strong(class='log-out-settings-text') Logout
         div(class='settings')
             strong(class='log-out-settings-text') Settings
+        div(class='item-enrollment')
+                p
+                    strong New students:
+                    for Student in ClassData.enrollmentList
+                        p= Student.firstName + ' '+Student.lastName
         div(class='item-notif')
             p
                 strong Assignments:
@@ -48,15 +53,12 @@ block content
                     p(class='messageDate')= 'Posted by ' + Message.author + ' on ' + Message.date
                         h1(class='messageAuthor')= Message.title+":"
                     p(class='messageContent')= Message.content
-                if Message.type === 'announcement'
-                    if Message.comments.length > 0
-                        div(class='message-comments' style=`grid-row: ${m + 1} / ${m + 2}; grid-column: 3 / 10;`)
-                            h1(class='message-comments-header') Comments:
-                            for Comments in Message.comments
-                                p(class='author')= `${Comments.author}: `
-                                    pContent= Comments.content
-                else
-                    input(type='file' name='assignmentImageUpload' accept="image/png")
+                if Message.comments.length > 0
+                    div(class='message-comments' style=`grid-row: ${m + 1} / ${m + 2}; grid-column: 3 / 10;`)
+                        h1(class='message-comments-header') Comments:
+                        for Comments in Message.comments
+                            p(class='author')= `${Comments.author}: `
+                                pContent= Comments.content
                 div(class='message-comment-input' style=`grid-row: ${m + 2} / ${m + 3}; grid-column: 3 / 10;`)
                     form(class='announce-form' method="post" action='/admin/class/'+Class+'/comment/' + Message.id)
                         textarea(class='comment-input' type='text' id='commentTextbox' placeholder='Write a comment!' name='comment' value= comment)

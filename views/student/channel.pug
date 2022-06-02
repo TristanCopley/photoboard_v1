@@ -12,14 +12,19 @@ block content
             strong(class='log-out-settings-text') Logout
         div(class='settings')
             strong(class='log-out-settings-text') Settings
+        div(class='item-enrollment')
+                    p
+                        strong New students:
+                        for Student in ClassData.enrollmentList
+                            p= Student.firstName + ' '+Student.lastName
         div(class='item-notif')
             p
                 strong Assignments:
                 p None!
-        div(class='item-banner-back' style="background-color: "+ClassData.bannerColor+"; grid-row: 1 / 4; grid-column: 3 / 10;")
+        div(class='item-banner-back' style="background-color: "+ClassData.bannerColor+"; grid-row: 1 / 4; grid-column: 3 / 8;")
             p(class='classCode') Class code:
                 strong= ' ' + Class
-        div(class='item-banner-top' style='grid-row: 3 / 4; grid-column: 3 / 10;')
+        div(class='item-banner-top' style='grid-row: 3 / 4; grid-column: 3 / 8;')
             h1(class='name')= ClassData.name
             h2(class='subtext')= 'Period ' + ClassData.period
             pContent= ClassData.classDesc
